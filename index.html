@@ -207,14 +207,14 @@
           					</div>
         				</div>
         				<div class="projects-wrapper">
-          					<div class="project-card">
+          					<div class="project-card" data-href="./projects/whereshouldwego.html">
             						<div class="wrapper10">
               							<div class="favicon">
                 								<div class="favicon-child">
                 								</div>
               							</div>
               							<div class="wrapper11">
-                								<b class="connect">프로젝트 제목</b>
+                								<b class="connect">어디갈래?</b>
                 								<div class="calendar-wrapper">
                   									<img class="icon-frame2" alt="" src="./assets/calender_icon.svg">
                   									
@@ -271,14 +271,14 @@
               							</div>
             						</div>
           					</div>
-          					<div class="project-card">
+          					<div class="project-card" data-href="./projects/klyde.html">
             						<div class="wrapper10">
               							<div class="favicon">
                 								<div class="favicon-child">
                 								</div>
               							</div>
               							<div class="wrapper11">
-                								<b class="connect">프로젝트 제목</b>
+                								<b class="connect">KLYDE</b>
                 								<div class="calendar-wrapper">
                   									<img class="icon-frame2" alt="" src="./assets/calender_icon.svg">
                   									
@@ -290,7 +290,7 @@
               							<div class="tag">
                 								<img class="phosphor-icons-users" alt="" src="./assets/user_blue_icon.svg">
                 								
-                								<div class="tag1">참여 인원 | 6명</div>
+                								<div class="tag1">참여 인원 | 2명</div>
               							</div>
               							<div class="tag2">
                 								<img class="phosphor-icons-users" alt="" src="./assets/lightning_blue_icon.svg">
@@ -335,14 +335,14 @@
               							</div>
             						</div>
           					</div>
-          					<div class="project-card">
+          					<div class="project-card" data-href="./projects/paper.html">
             						<div class="wrapper10">
               							<div class="favicon">
                 								<div class="favicon-child">
                 								</div>
               							</div>
               							<div class="wrapper11">
-                								<b class="connect">프로젝트 제목</b>
+                								<b class="connect">인공신경망 및 랜덤포레스트 기법을 활용한 기업 분식회계 탐지 성능 평가 연구</b>
                 								<div class="calendar-wrapper">
                   									<img class="icon-frame2" alt="" src="./assets/calender_icon.svg">
                   									
@@ -560,6 +560,16 @@
   </div>
   	
   	
-  	
+<script>
+	document.querySelectorAll('.project-card').forEach(card => {
+		const url = card.dataset.href;
+		card.setAttribute('role', 'link');
+		card.setAttribute('tabindex', '0');
+		card.addEventListener('click', () => { window.location.href = url; });
+		card.addEventListener('keydown', (e) => {
+		if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+		});
+	});
+</script>
 </body>
 </html>

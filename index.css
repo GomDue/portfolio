@@ -400,6 +400,16 @@
     justify-content: flex-start;
     padding: 36px;
     gap: 24px;
+    cursor: pointer;
+}
+.project-card:hover,
+.project-card:focus-visible {
+  border-color: #0d7ab6; 
+  transform: translateY(-4px);
+  outline: 2px solid #0d7ab6;
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-card { transition: none; }
 }
 .projects-wrapper {
     align-self: stretch;
