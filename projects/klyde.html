@@ -1,244 +1,583 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
+
 <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	
-  	<link rel="stylesheet"  href="./index.css" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;700;900&display=swap" />
-  	
-  	
-  	
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width">
+	<link rel="stylesheet" href="./index.css" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;700;900&display=swap" />
+	<title>KLYDE — 프로젝트 상세</title>
+	<style>
+		/* 헬퍼만 추가 (디자인 영향 최소화) */
+		.stack-table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		.stack-table th,
+		.stack-table td {
+			border: 1px solid #e5e7eb;
+			padding: 8px 10px;
+			text-align: left;
+		}
+
+		.stack-table thead th {
+			background: #f8fafc;
+		}
+
+		.subheading {
+			font-weight: 700;
+			margin: 8px 0;
+		}
+
+		.mono {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+		}
+
+		.content-img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: 8px 0;
+		}
+	</style>
 </head>
+
 <body>
-  	
-  	<div class="project-detail-view">
-    		<div class="container">
-      			<div class="project-card">
-        				<div class="wrapper">
-          					<div class="favicon">
-            						<div class="favicon-child">
-            						</div>
-          					</div>
-          					<div class="wrapper1">
-            						<b class="b">KYLDE</b>
-            						<div class="calendar-wrapper">
-              							<img class="icon-frame" alt="" src="Icon Frame.svg">
-              							
-              							<div class="xxxxx-202xxxxx">2025.07.14 ~ 2025.08.22</div>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="wrapper2">
-          					<div class="tag">
-            						<img class="phosphor-icons-users" alt="" src="Phosphor Icons / Users.svg">
-            						
-            						<div class="tag1">참여 인원 | 6명</div>
-          					</div>
-          					<div class="tag2">
-            						<img class="phosphor-icons-users" alt="" src="Phosphor Icons / Lightning.svg">
-            						
-            						<div class="tag1">대표 성과 | 동혁이가 천재다짱짱맨뿡뿡</div>
-          					</div>
-        				</div>
-        				<div class="link-wrapper">
-          					<div class="wrapper3">
-            						<img class="mdigithub-icon" alt="" src="mdi:github.svg">
-            						
-            						<div class="github">github</div>
-            						<img class="feather-icons-arrow-up-right" alt="" src="Feather Icons / arrow-up-right.svg">
-            						
-          					</div>
-          					<div class="wrapper3">
-            						<img class="mdigithub-icon" alt="" src="lineicons:notion.svg">
-            						
-            						<div class="github">github</div>
-            						<img class="feather-icons-arrow-up-right" alt="" src="Feather Icons / arrow-up-right.svg">
-            						
-          					</div>
-        				</div>
-      			</div>
-      			<div class="body-contents-wrapper">
-        				<div class="wrapper5">
-          					<b class="b">
-            						<ol class="ol">
-              							<li>프로젝트 개요</li>
-            						</ol>
-          					</b>
-          					<div class="divider">
-            						<div class="min-height">
-            						</div>
-            						<div class="divider1">
-            						</div>
-          					</div>
-          					<div class="contents-wrapper">
-            						<div class="div">
-              							<ul class="ul">
-                								<li>얄리얄리 얄랴성 얄라리 얄라 얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라</li>
-              							</ul>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="wrapper5">
-          					<b class="b">
-            						<ol class="ol">
-              							<li>문제 정의 & 목표</li>
-            						</ol>
-          					</b>
-          					<div class="divider">
-            						<div class="min-height">
-            						</div>
-            						<div class="divider1">
-            						</div>
-          					</div>
-          					<div class="contents-wrapper">
-            						<div class="div">
-              							<ul class="ul">
-                								<li>얄리얄리 얄랴성 얄라리 얄라 얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라</li>
-              							</ul>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="wrapper5">
-          					<b class="b">
-            						<ol class="ol">
-              							<li>주요 기능</li>
-            						</ol>
-          					</b>
-          					<div class="divider">
-            						<div class="min-height">
-            						</div>
-            						<div class="divider1">
-            						</div>
-          					</div>
-          					<div class="contents-wrapper">
-            						<div class="div">
-              							<ul class="ul">
-                								<li>얄리얄리 얄랴성 얄라리 얄라 얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라</li>
-              							</ul>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="wrapper5">
-          					<b class="b">
-            						<ol class="ol">
-              							<li>기술 스택</li>
-            						</ol>
-          					</b>
-          					<div class="divider">
-            						<div class="min-height">
-            						</div>
-            						<div class="divider1">
-            						</div>
-          					</div>
-          					<div class="contents-wrapper">
-            						<div class="div">
-              							<ul class="ul">
-                								<li>얄리얄리 얄랴성 얄라리 얄라 얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라</li>
-              							</ul>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="wrapper5">
-          					<b class="b">
-            						<ol class="ol">
-              							<li>시스템 아키텍처</li>
-            						</ol>
-          					</b>
-          					<div class="divider">
-            						<div class="min-height">
-            						</div>
-            						<div class="divider1">
-            						</div>
-          					</div>
-          					<div class="contents-wrapper">
-            						<div class="div">
-              							<ul class="ul">
-                								<li>얄리얄리 얄랴성 얄라리 얄라 얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라</li>
-              							</ul>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="wrapper5">
-          					<b class="b">
-            						<ol class="ol">
-              							<li>담당 업무</li>
-            						</ol>
-          					</b>
-          					<div class="divider">
-            						<div class="min-height">
-            						</div>
-            						<div class="divider1">
-            						</div>
-          					</div>
-          					<div class="contents-wrapper">
-            						<div class="div">
-              							<ul class="ul">
-                								<li>얄리얄리 얄랴성 얄라리 얄라 얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라</li>
-              							</ul>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="wrapper5">
-          					<b class="b">
-            						<ol class="ol">
-              							<li>기술적 한계 및 회고</li>
-            						</ol>
-          					</b>
-          					<div class="divider">
-            						<div class="min-height">
-            						</div>
-            						<div class="divider1">
-            						</div>
-          					</div>
-          					<div class="contents-wrapper">
-            						<div class="div">
-              							<ul class="ul">
-                								<li>얄리얄리 얄랴성 얄라리 얄라 얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라</li>
-              							</ul>
-            						</div>
-          					</div>
-        				</div>
-      			</div>
-      			<div class="btn-wrapper">
-        				<div class="button">
-          					<img class="phosphor-icons-users" alt="" src="Phosphor Icons / CaretLeft.svg">
-          					
-          					<div class="button1">돌아가기</div>
-        				</div>
-      			</div>
-    		</div>
-    		<div class="sticky">
-      			<div class="text-wrapper">
-        				<div class="div7">협업은 부드럽게, 기준은 단단하게.</div>
-        				<b class="b8">신입 데이터 엔지니어 황동혁입니다.</b>
-      			</div>
-      			<div class="wrapper12">
-        				<div class="button2" id="buttonContainer">
-          					<img class="phosphor-icons-caretleft1" alt="" src="Phosphor Icons / CaretLeft.svg">
-          					
-        				</div>
-        				<b class="b9">프로젝트 상세보기</b>
-      			</div>
-    		</div>
-  	</div>
-  	
-  	
-  	
-  	
-  	<script>
+	<div class="project-detail-view">
+		<div class="container">
+			<!-- 헤더 카드 -->
+			<div class="project-card">
+				<div class="wrapper">
+					<div class="favicon">
+						<div class="favicon-child favicon-klyde"></div>
+					</div>
+					<div class="wrapper1">
+						<b class="b">KLYDE</b>
+						<div class="calendar-wrapper">
+							<img class="icon-frame" alt="" src="/assets/calender_icon.svg">
+							<div class="xxxxx-202xxxxx">2025.05.22 ~ 2025.05.27</div>
+						</div>
+					</div>
+				</div>
+				<div class="wrapper2">
+					<div class="tag">
+						<img class="phosphor-icons-users" alt="" src="/assets/user_blue_icon.svg">
+						<div class="tag1">참여 인원 | 2명</div>
+					</div>
+					<div class="tag2">
+						<img class="phosphor-icons-users" alt="" src="/assets/lightning_blue_icon.svg">
+						<div class="tag1">대표 성과 | 실시간 뉴스 파이프라인</div>
+					</div>
+				</div>
+				<div class="link-wrapper">
+					<div class="wrapper3" id="buttonContainer" data-href="https://github.com/GomDue/KLYDE.git"
+						role="link" tabindex="0" aria-label="Git 저장소 열기">
+						<img class="mdigithub-icon" alt="" src="/assets/github_blue_icon.svg">
+						<div class="github">Github</div>
+						<img class="feather-icons-arrow-up-right" alt="" src="/assets/arrow_up_right_blue_icon.svg">
+					</div>
+				</div>
+			</div>
+
+			<!-- 본문 -->
+			<div class="body-contents-wrapper">
+				<!-- 1. 프로젝트 개요 -->
+				<div class="wrapper5">
+					<b class="b">
+						<ol class="ol">
+							<li>프로젝트 개요</li>
+						</ol>
+					</b>
+					<div class="divider">
+						<div class="min-height"></div>
+						<div class="divider1"></div>
+					</div>
+					<div class="contents-wrapper">
+						<div class="div">
+
+							<div class="subheading">기획 배경</div>
+							<ul class="ul">
+								<li>여러 사이트에 흩어진 방대한 뉴스 속에서 <b>개인에게 필요한 기사를 빠르게 찾기 어렵고</b>, 전반 흐름을 파악하기도 쉽지 않았습니다.</li>
+								<li>특히 <b>영문 기사 이해 난이도</b>가 높아 소비 장벽이 존재했습니다.</li>
+								<li>KLYDE는 이 문제를 <b>추천·요약·번역</b>으로 풀어 사용자가 <b>쉽게 찾고 빠르게 이해</b>하도록 돕고자 했습니다.</li>
+							</ul>
+
+							<div class="subheading">프로젝트 목표</div>
+							<ul class="ul">
+								<li>사용자의 관심사에 맞춘 <b>맞춤형 뉴스 제공</b>과 <b>AI 챗봇</b>으로 뉴스 이해를 돕습니다.</li>
+								<li>“Clarity + Glide” 철학처럼, <b>핵심 정보를 명료하게 정리</b>하고 <b>매끄럽게 전달</b>하는 경험을 제공합니다.</li>
+								<li><b>전면 영어 기반</b> 소스(RSS: BBC, NYT, ZDNet Korea, Nippon 등)를 수집해 글로벌 뉴스를 다룹니다.</li>
+							</ul>
+
+							<div class="subheading">팀 구성</div>
+							<ul class="ul">
+								<li>2인 (Full Stack 1 · BE/Data Pipeline 1[본인])</li>
+							</ul>
+
+							<div class="subheading">주요 기능</div>
+							<ul class="ul">
+								<li><b>실시간 뉴스 수집 및 처리:</b> RSS, Selenium 기반 뉴스 크롤링 → Kafka 실시간 처리</li>
+								<li><b>AI 분석 자동화:</b> GPT-4o-mini API 호출로 카테고리 분류, 키워드 추출, 임베딩</li>
+								<li><b>다계층 저장소 구성:</b> PostgreSQL(DB), Elasticsearch(검색) 병렬 저장</li>
+								<li><b>Elasticsearch 동기화 DAG:</b> PostgreSQL 변경사항을 10분마다 Elasticsearch에 반영</li>
+								<li><b>일일 뉴스 분석 리포트:</b> Spark 분석 결과를 PDF로 정리해 이메일 자동 발송 (Airflow + Gmail API)</li>
+							</ul>
+
+							<div class="subheading">기술 스택</div>
+							<table class="stack-table">
+								<thead>
+									<tr>
+										<th>분야</th>
+										<th>기술 스택</th>
+										<th>설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>데이터 수집</td>
+										<td>RSS, BeautifulSoup</td>
+										<td>뉴스 본문·메타데이터 수집</td>
+									</tr>
+									<tr>
+										<td>실시간 처리</td>
+										<td>Kafka (Producer/Consumer)</td>
+										<td>스트리밍 파이프라인 구성</td>
+									</tr>
+									<tr>
+										<td>저장소</td>
+										<td>PostgreSQL, Elasticsearch</td>
+										<td>운영 DB, 검색 인덱스(전문검색)</td>
+									</tr>
+									<tr>
+										<td>AI 분석</td>
+										<td>OpenAI GPT-4o-mini</td>
+										<td>분류·키워드·요약/번역·임베딩</td>
+									</tr>
+									<tr>
+										<td>배치 분석</td>
+										<td>Apache Spark, Matplotlib</td>
+										<td>전일 집계·시각화(PDF 리포트)</td>
+									</tr>
+									<tr>
+										<td>워크플로우</td>
+										<td>Apache Airflow</td>
+										<td>일일 리포트·ES 동기화 DAG, Gmail API 발송</td>
+									</tr>
+									<tr>
+										<td>웹</td>
+										<td>Django, Vue.js</td>
+										<td>관리/대시보드 개발</td>
+									</tr>
+									<tr>
+										<td>인프라</td>
+										<td>Docker Compose</td>
+										<td>통합 컨테이너 운영</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<div class="subheading">시연</div>
+							<div class="demo-grid">
+								<div class="project-card">
+									<figure>
+										<img class="video lightboxable" src="/assets/klyde/dashboard.gif" alt="대시보드 시연"
+											loading="lazy">
+										<figcaption class="sr-only">대시보드 기능 시연</figcaption>
+									</figure>
+								</div>
+								<div class="project-card">
+									<figure>
+										<img class="video lightboxable" src="/assets/klyde/chatbot.gif" alt="챗봇 시연"
+											loading="lazy">
+										<figcaption class="sr-only">챗봇 기능 시연</figcaption>
+									</figure>
+								</div>
+								<div class="project-card">
+									<figure>
+										<img class="video lightboxable" src="/assets/klyde/news-detail-comment.gif"
+											alt="뉴스 상세 및 댓글 시연" loading="lazy">
+										<figcaption class="sr-only">뉴스 상세 및 댓글 기능 시연</figcaption>
+									</figure>
+								</div>
+								<div class="project-card">
+									<figure>
+										<img class="video lightboxable" src="/assets/klyde/search-sort.gif"
+											alt="검색 및 정렬 시연" loading="lazy">
+										<figcaption class="sr-only">검색 및 정렬 기능 시연</figcaption>
+									</figure>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+
+				<!-- 2. 역할 및 기여도 -->
+				<div class="wrapper5">
+					<b class="b">
+						<ol class="ol" start="2">
+							<li>역할 및 기여도</li>
+						</ol>
+					</b>
+					<div class="divider">
+						<div class="min-height"></div>
+						<div class="divider1"></div>
+					</div>
+					<div class="contents-wrapper">
+						<div class="div">
+							<ul class="ul">
+								<li><b>Kafka Producer/Consumer</b> 설계·구현, 실시간 LLM 파이프라인</li>
+								<li>Airflow로 일일 리포트 자동화 및 PostgreSQL ↔ Elasticsearch 동기화</li>
+								<li>Docker-compose로 통합 개발환경 구성</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- 3. 개발 상세 — 실시간 파이프라인 구성 -->
+				<div class="wrapper5">
+					<b class="b">
+						<ol class="ol" start="3">
+							<li>개발 상세</li>
+						</ol>
+					</b>
+					<div class="divider">
+						<div class="min-height"></div>
+						<div class="divider1"></div>
+					</div>
+					<div class="contents-wrapper">
+						<div class="div">
+
+							<details>
+								<summary><b>3.1. 실시간 파이프라인 구성</b></summary>
+								<div class="content">
+									<h4>배경</h4>
+									<ul class="ul">
+										<li>KLYDE는 실시간으로 뉴스를 모으고, 분류·키워드 추출·추천까지 해주는 서비스입니다.</li>
+										<li>단순히 한 번에 DB에 저장하는 구조로는 처리 과정 변F경이나 기능 추가가 어려워서, 단계별로 데이터를 흘려보내고 가공할 수 있는 구조가
+											필요했습니다.</li>
+									</ul>
+
+									<h4>도전</h4>
+									<ul class="ul">
+										<li>수집→전처리→저장→검색까지 <b>지연을 낮추고</b>, 처리 중 <b>중복/유실</b>을 최소화해야 합니다.</li>
+										<li>소스가 늘어나도 설정만으로 <b>간단히 확장</b>할 수 있어야 합니다.</li>
+									</ul>
+
+									<h4>해결 방안</h4>
+									<ul class="ul">
+										<li><b>Kafka 단일 토픽</b>(환경변수 <span class="mono">KAFKA_TOPIC</span>)으로 단순한 실시간
+											파이프라인을 구성했습니다.</li>
+										<li><b>Producer</b>
+											<ul>
+												<li>RSS를 파싱하고 스크레이퍼로 본문을 수집한 뒤 JSON 메시지를 발행합니다.</li>
+												<li>메시지 <b>Key는 URL 해시</b>를 사용해 <b>같은 기사는 같은 파티션</b>에 들어가도록 했습니다.</li>
+											</ul>
+										</li>
+										<li><b>Consumer</b>
+											<ul>
+												<li>기본 <b>auto-commit</b>을 사용해 지연을 낮췄습니다.</li>
+												<li>수신 기사에 대해 <b>전처리</b>(토큰 기준 길이 제한, 공백/형식 정리) 후 <b>운영
+														DB(PostgreSQL)</b>에 저장하고, 성공 시 <b>Elasticsearch</b>에 색인합니다.</li>
+												<li>DB 저장에 실패하면 해당 건은 ES 색인을 건너뜁니다(로그로 추적).</li>
+												<li><b>LLM 후처리 모듈</b>(키워드 추출/카테고리 분류/임베딩)은 함수로 분리해 두었고, <b>운영 비용/속도에 따라
+														토글</b>할 수 있게 했습니다(기본값 Off).</li>
+											</ul>
+										</li>
+									</ul>
+
+									<h4>성과</h4>
+									<ul class="ul">
+										<li>수집 직후 <b>전처리→DB 저장→ES 색인</b>까지 자동으로 이어지는 <b>실시간 파이프라인</b>을 구축했습니다.</li>
+										<li>메시지 키/업서트/주기 동기화로 <b>중복·불일치</b>를 줄였고, 단일 토픽 구성으로 <b>운영 단순성</b>을 확보했습니다.</li>
+									</ul>
+								</div>
+							</details>
+
+							<details>
+								<summary><b>3.2. 저장 전략(이중 저장)</b></summary>
+								<div class="content">
+									<h4>배경</h4>
+									<ul class="ul">
+										<li>뉴스 데이터는 <b>검색/추천/분석</b> 등 서로 다른 접근 패턴이 필요합니다.</li>
+										<li><b>PostgreSQL</b>은 정합성과 SQL 집계에 강점, <b>Elasticsearch</b>는 전문 검색과 고속 질의에 강점이
+											있습니다.</li>
+										<li>실시간 처리된 데이터를 <b>두 저장소에 반영</b>해 각자의 장점을 살려야 합니다.</li>
+									</ul>
+
+									<h4>도전</h4>
+									<ul class="ul">
+										<li>PostgreSQL과 Elasticsearch에 <b>동시에 쓰는 과정</b>에서 일시적 <b>정합성 불일치</b>가 생길 수 있습니다.
+										</li>
+										<li><b>중복 삽입 방지</b>와 <b>업데이트 시 일치성</b> 보장이 필요합니다.</li>
+									</ul>
+
+									<h4>해결 방안</h4>
+									<ul class="ul">
+										<li><b>PostgreSQL</b>: 원본 데이터 보존, 운영 정합성 유지, 집계/통계 질의 최적화.</li>
+										<li><b>Elasticsearch</b>: 전문 검색, 하이라이팅, 추천용 쿼리에 활용.</li>
+										<li>업서트 키 = URL:
+											<ul>
+												<li>PostgreSQL: <span class="mono">ON CONFLICT (url)</span>로 중복 방지.</li>
+												<li>Elasticsearch: <span class="mono">_id = url</span> + <span
+														class="mono">doc_as_upsert=true</span> 로 upsert 처리.</li>
+											</ul>
+										</li>
+									</ul>
+
+									<h4>성과</h4>
+									<ul class="ul">
+										<li>정합성과 검색 성능을 동시에 확보했습니다.</li>
+										<li>실시간 업서트 + 주기 동기화로 <b>DB↔ES 불일치</b>를 최소화하고, 검색/추천 응답 속도를 높였습니다.</li>
+									</ul>
+								</div>
+							</details>
+
+							<details>
+								<summary><b>3.3. 배치 분석 및 리포트 자동화</b></summary>
+								<div class="content">
+									<h4>배경</h4>
+									<ul class="ul">
+										<li>사용자가 매일 아침 전날 기사들의 통계를 확인할 수 있어야 합니다.</li>
+										<li>사용자는 뉴스 검색·추천 기능을 통해 즉시 최신 데이터를 보지만, 내부 의사결정을 위한 <b>집계·분석 리포트</b>가 필요했습니다.
+										</li>
+									</ul>
+
+									<h4>도전</h4>
+									<ul class="ul">
+										<li>전날 수집한 <b>전체 기사</b>를 빠르게 집계하고 보기 좋게 시각화해야 합니다.</li>
+										<li>리포트 생성부터 <b>이메일 발송까지 자동화</b>된 하나의 흐름으로 관리해야 합니다.</li>
+									</ul>
+
+									<h4>해결 방안</h4>
+									<ul class="ul">
+										<li><b>Spark</b>로 전날(00:00~24:00, KST) 데이터를 <b>PostgreSQL JDBC</b>로 읽어
+											<b>DataFrame/SQL</b>로 집계합니다.
+										</li>
+										<li>다음 <b>여섯 가지 시각화</b>를 생성해 <b>PDF</b>로 묶습니다:
+											<ol>
+												<li><b>KPI 패널</b>: 기준일, <b>총 기사 수</b>, <b>DoD(전일 대비 %)</b>, <b>고유 카테고리
+														수</b>, <b>최상위 키워드</b> 표시.</li>
+												<li><b>최근 14일 추이(Line)</b>: 일자별 기사 수 변화(DoD 계산에 활용).</li>
+												<li><b>시간대 분포(Bar)</b>: 0–23시대 기사 수 분포.</li>
+												<li><b>키워드 TOP 10(Bar)</b>: 빈도와 라벨 표시.</li>
+												<li><b>카테고리 TOP 10(H-Bar)</b>: 상위 카테고리와 건수 라벨.</li>
+												<li><b>키워드 Word Cloud</b>: 전일 주요 키워드 시각 요약.</li>
+											</ol>
+										</li>
+										<li>생성한 지표는 <b>데이터 마트 테이블</b>에도 저장합니다(키워드/카테고리/요약).</li>
+										<li><b>Airflow</b>가 매일 <b>06:00 KST</b>에 DAG를 실행하고, <b>Gmail API</b>로 수신 동의
+											사용자에게 리포트를 발송합니다(실패 시 재시도 설정).</li>
+									</ul>
+
+									<h4>성과</h4>
+									<ul class="ul">
+										<li>매일 아침 자동으로 <b>시각화 리포트</b>를 제공해 운영 효율이 향상되었습니다.</li>
+										<li><b>KPI·추이·시간대·키워드·카테고리·워드클라우드</b>까지 한 번에 제공하여 전날 뉴스 흐름을 <b>빠르게 파악</b>할 수
+											있습니다.</li>
+										<li><b>Spark + Airflow</b> 조합으로 대용량 집계와 스케줄링을 안정적으로 처리합니다.</li>
+									</ul>
+								</div>
+							</details>
+
+							<details>
+								<summary><b>3.4. Elasticsearch 동기화</b></summary>
+								<div class="content">
+									<h4>배경</h4>
+									<ul class="ul">
+										<li>실시간 파이프라인에서 PostgreSQL과 Elasticsearch 동시 쓰기(dual-write)를 사용합니다.</li>
+										<li>장애·네트워크 이슈로 두 저장소 간 <b>데이터 불일치</b>가 생길 수 있어 보정 절차가 필요했습니다.</li>
+										<li>검색 인덱스 역할인 Elasticsearch보다 <b>최종 정합성 기준은 PostgreSQL</b>이어야 합니다.</li>
+									</ul>
+
+									<h4>도전</h4>
+									<ul class="ul">
+										<li>실시간 쓰기를 유지하면서, 주기적으로 <b>변경분을 찾아 ES에 반영</b>해 불일치를 줄여야 합니다.</li>
+									</ul>
+
+									<h4>해결 방안</h4>
+									<ul class="ul">
+										<li>PostgreSQL의 <b><code>updated_at</code></b> 기준으로 변경된 행만 조회합니다.</li>
+										<li>Airflow DAG(10분 주기) 순서:
+											<ol>
+												<li><code>SELECT * FROM news_article WHERE updated_at &gt;= last_sync_ts</code>
+													로 변경분 조회.</li>
+												<li>결과를 <b>Elasticsearch Bulk Upsert</b>로 반영(<code>_id = url</code>,
+													<code>doc_as_upsert=true</code>).
+												</li>
+												<li>성공 시 <code>last_sync_ts</code> 갱신 → 다음 주기부터 증분 처리.</li>
+											</ol>
+										</li>
+										<li>실시간 검색 속도는 유지하면서 <b>주기적 보정</b> 수행.</li>
+									</ul>
+
+									<h4>성과</h4>
+									<ul class="ul">
+										<li>실시간성과 정합성을 <b>동시에 충족</b>했습니다.</li>
+										<li>10분 주기의 보정으로 <b>DB↔ES 불일치</b>를 최소화합니다.</li>
+									</ul>
+								</div>
+							</details>
+
+						</div>
+					</div>
+				</div>
+
+
+				<!-- 7. 회고 -->
+				<div class="wrapper5">
+					<b class="b">
+						<ol class="ol" start="4">
+							<li>회고</li>
+						</ol>
+					</b>
+					<div class="divider">
+						<div class="min-height"></div>
+						<div class="divider1"></div>
+					</div>
+					<div class="contents-wrapper">
+						<div class="div">
+							<ul class="ul">
+								<li><b>단일 토픽 기반 파이프라인</b>으로 운영 단순성을 얻었지만, 향후 토픽 세분화 필요성을 느꼈습니다.</li>
+								<li><b>이중 저장 전략</b>을 직접 구현하면서 DB↔ES 정합성 유지의 어려움을 체감했고, CDC 도입 필요성을 인식했습니다.</li>
+								<li><b>Spark+Airflow</b> 리포트 자동화로 운영 효율을 크게 개선했지만, 리소스 사용량 최적화는 추가 과제입니다.</li>
+								<li>실시간성과 배치 분석을 함께 설계하며 <b>데이터 파이프라인 전주기 경험</b>을 쌓을 수 있었습니다.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- 하단 버튼 -->
+			<div class="btn-wrapper">
+				<div class="button" id="buttonContainer" data-href="../../index.html" role="link" tabindex="0"
+					aria-label="목록으로 돌아가기">
+					<img class="phosphor-icons-users" alt="" src="/assets/caret_left_icon.svg">
+					<div class="button1">돌아가기</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="sticky">
+		<div class="text-wrapper">
+			<div class="div7">협업은 부드럽게, 기준은 단단하게.</div>
+			<b class="b8">신입 데이터 엔지니어 황동혁입니다.</b>
+		</div>
+		<div class="wrapper12">
+			<div class="button2" id="buttonContainer" data-href="../../index.html" role="link">
+				<img class="phosphor-icons-caretleft1" alt="" src="/assets/caret_left_icon.svg">
+			</div>
+			<b class="b9">프로젝트 상세보기</b>
+		</div>
+	</div>
+
+	<script>
 		document.querySelectorAll('[id="buttonContainer"]').forEach((btn) => {
 			const url = btn.dataset.href || './index.html';
-
 			const go = () => { window.location.href = url; };
-
 			btn.addEventListener('click', go);
 			btn.addEventListener('keydown', (e) => {
-			if (e.key === 'Enter' || e.key === ' ') {
-				e.preventDefault();
-				go();
-			}
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					go();
+				}
 			});
 		});
-	</script></body>
+
+		(function () {
+			// 오버레이 DOM 생성
+			const overlay = document.createElement('div');
+			overlay.className = 'lightbox-overlay';
+			overlay.innerHTML = `
+    <div class="lightbox-content" tabindex="-1" role="dialog" aria-modal="true">
+      <button class="lightbox-close" aria-label="닫기">✕</button>
+    </div>
+  `;
+			document.body.appendChild(overlay);
+
+			const content = overlay.querySelector('.lightbox-content');
+			const closeBtn = overlay.querySelector('.lightbox-close');
+
+			function getVideoSrc(el) {
+				const s = el.querySelector('source');
+				return (s && s.src) || el.currentSrc || el.src;
+			}
+
+			function openLightbox(el) {
+				// 기존 미디어 제거
+				content.querySelectorAll('img,video').forEach(n => n.remove());
+
+				let node;
+				if (el.tagName.toLowerCase() === 'img') {
+					node = document.createElement('img');
+					node.src = el.src;
+					node.alt = el.alt || '';
+				} else {
+					node = document.createElement('video');
+					node.src = getVideoSrc(el);
+					node.autoplay = true;
+					node.loop = true;
+					node.muted = true;
+					node.playsInline = true;
+					node.controls = true;
+				}
+
+				content.appendChild(node);
+				overlay.style.display = 'flex';
+				document.body.classList.add('lb-open');
+				content.focus();
+			}
+
+			function closeLightbox() {
+				overlay.style.display = 'none';
+				document.body.classList.remove('lb-open');
+				content.classList.remove('cover'); // cover 모드 해제
+				const v = content.querySelector('video');
+				if (v) { try { v.pause(); } catch (e) { } }
+			}
+
+			// 위임 클릭으로 열기
+			document.addEventListener('click', (e) => {
+				const t = e.target.closest('.lightboxable');
+				if (t) {
+					e.preventDefault();
+					openLightbox(t);
+				}
+			});
+
+			// 배경 클릭으로 닫기
+			overlay.addEventListener('click', (e) => {
+				if (e.target === overlay) closeLightbox();
+			});
+
+			closeBtn.addEventListener('click', closeLightbox);
+
+			// ESC 닫기
+			document.addEventListener('keydown', (e) => {
+				if (overlay.style.display === 'flex' && e.key === 'Escape') closeLightbox();
+			});
+
+			// Z 키 or 미디어 클릭으로 contain ↔ cover 전환
+			function toggleFitMode() {
+				content.classList.toggle('cover');
+			}
+
+			content.addEventListener('click', (e) => {
+				const media = e.target.closest('img,video');
+				if (media) toggleFitMode();
+			});
+
+			document.addEventListener('keydown', (e) => {
+				if (overlay.style.display === 'flex' && (e.key === 'z' || e.key === 'Z')) {
+					toggleFitMode();
+				}
+			});
+		})();
+	</script>
+</body>
+
 </html>

@@ -1,242 +1,698 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
+
 <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	
-  	<link rel="stylesheet"  href="./index.css" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;700;900&display=swap" />
-  	
-  	
-  	
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width">
+	<link rel="stylesheet" href="./index.css" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;700;900&display=swap" />
+	<title>어디갈래? — 프로젝트 상세</title>
+	<style>
+		/* 헬퍼만 추가 (디자인 영향 최소화) */
+		.stack-table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		.stack-table th,
+		.stack-table td {
+			border: 1px solid #e5e7eb;
+			padding: 8px 10px;
+			text-align: left;
+		}
+
+		.stack-table thead th {
+			background: #f8fafc;
+		}
+
+		.subheading {
+			font-weight: 700;
+			margin: 8px 0;
+		}
+
+		.mono {
+			font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+		}
+
+		.content-img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: 8px 0;
+		}
+	</style>
 </head>
+
 <body>
-  	
-  	<div class="project-detail-view">
-    		<div class="container">
-      			<div class="project-card">
-        				<div class="wrapper">
-          					<div class="favicon">
-            						<div class="favicon-child">
-            						</div>
-          					</div>
-          					<div class="wrapper1">
-            						<b class="b">어디갈래?</b>
-            						<div class="calendar-wrapper">
-              							<img class="icon-frame" alt="" src="/assets/calender_icon.svg">
-              							
-              							<div class="xxxxx-202xxxxx">2025.07.14 ~ 2025.08.22</div>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="wrapper2">
-          					<div class="tag">
-            						<img class="phosphor-icons-users" alt="" src="/assets/user_blue_icon.svg">
-            						
-            						<div class="tag1">참여 인원 | 6명</div>
-          					</div>
-          					<div class="tag2">
-            						<img class="phosphor-icons-users" alt="" src="/assets/lightning_blue_icon.svg">
-            						
-            						<div class="tag1">대표 성과 | 동혁이가 천재다짱짱맨뿡뿡</div>
-          					</div>
-        				</div>
-        				<div class="link-wrapper">
-          					<div class="wrapper3" id="buttonContainer">
-            						<img class="mdigithub-icon" alt="" src="/assets/github_blue_icon.svg">
-            						
-            						<div class="github">github</div>
-            						<img class="feather-icons-arrow-up-right" alt="" src="/assets/arrow_up_right_blue_icon.svg">
-            						
-          					</div>
-          					<div class="wrapper3" id="buttonContainer" data-href="https://band-cheddar-f06.notion.site/22aefa246e29804ea730f6f523c3050d" role="link", tabindex="0">
-            						<img class="mdinotion-icon" alt="" src="/assets/notion_blue_icon.svg">
-            						
-            						<div class="notion">notion</div>
-            						<img class="feather-icons-arrow-up-right" alt="" src="/assets/arrow_up_right_blue_icon.svg">
-            						
-          					</div>
-        				</div>
-      			</div>
-      			<div class="body-contents-wrapper">
-        				<div class="wrapper5">
-          					<b class="b">
-            						<ol class="ol">
-              							<li>프로젝트 개요</li>
-            						</ol>
-          					</b>
-          					<div class="divider">
-            						<div class="min-height">
-            						</div>
-            						<div class="divider1">
-            						</div>
-          					</div>
-          					<div class="contents-wrapper">
-            						<div class="div">
-              							<ul class="ul">
-                								<li>얄리얄리 얄랴성 얄라리 얄라 얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라</li>
-              							</ul>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="wrapper5">
-          					<b class="b">
-            						<ol class="ol">
-              							<li>문제 정의 & 목표</li>
-            						</ol>
-          					</b>
-          					<div class="divider">
-            						<div class="min-height">
-            						</div>
-            						<div class="divider1">
-            						</div>
-          					</div>
-          					<div class="contents-wrapper">
-            						<div class="div">
-              							<ul class="ul">
-                								<li>얄리얄리 얄랴성 얄라리 얄라 얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라</li>
-              							</ul>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="wrapper5">
-          					<b class="b">
-            						<ol class="ol">
-              							<li>주요 기능</li>
-            						</ol>
-          					</b>
-          					<div class="divider">
-            						<div class="min-height">
-            						</div>
-            						<div class="divider1">
-            						</div>
-          					</div>
-          					<div class="contents-wrapper">
-            						<div class="div">
-              							<ul class="ul">
-                								<li>얄리얄리 얄랴성 얄라리 얄라 얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라</li>
-              							</ul>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="wrapper5">
-          					<b class="b">
-            						<ol class="ol">
-              							<li>기술 스택</li>
-            						</ol>
-          					</b>
-          					<div class="divider">
-            						<div class="min-height">
-            						</div>
-            						<div class="divider1">
-            						</div>
-          					</div>
-          					<div class="contents-wrapper">
-            						<div class="div">
-              							<ul class="ul">
-                								<li>얄리얄리 얄랴성 얄라리 얄라 얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라</li>
-              							</ul>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="wrapper5">
-          					<b class="b">
-            						<ol class="ol">
-              							<li>시스템 아키텍처</li>
-            						</ol>
-          					</b>
-          					<div class="divider">
-            						<div class="min-height">
-            						</div>
-            						<div class="divider1">
-            						</div>
-          					</div>
-          					<div class="contents-wrapper">
-            						<div class="div">
-              							<ul class="ul">
-                								<li>얄리얄리 얄랴성 얄라리 얄라 얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라</li>
-              							</ul>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="wrapper5">
-          					<b class="b">
-            						<ol class="ol">
-              							<li>담당 업무</li>
-            						</ol>
-          					</b>
-          					<div class="divider">
-            						<div class="min-height">
-            						</div>
-            						<div class="divider1">
-            						</div>
-          					</div>
-          					<div class="contents-wrapper">
-            						<div class="div">
-              							<ul class="ul">
-                								<li>얄리얄리 얄랴성 얄라리 얄라 얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라</li>
-              							</ul>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="wrapper5">
-          					<b class="b">
-            						<ol class="ol">
-              							<li>기술적 한계 및 회고</li>
-            						</ol>
-          					</b>
-          					<div class="divider">
-            						<div class="min-height">
-            						</div>
-            						<div class="divider1">
-            						</div>
-          					</div>
-          					<div class="contents-wrapper">
-            						<div class="div">
-              							<ul class="ul">
-                								<li>얄리얄리 얄랴성 얄라리 얄라 얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라얄리얄리 얄랴성 얄라리 얄라</li>
-              							</ul>
-            						</div>
-          					</div>
-        				</div>
-      			</div>
-      			<div class="btn-wrapper">
-        				<div class="button" id="buttonContainer" data-href="../../index.html">
-          					<img class="phosphor-icons-users" alt="" src="/assets/caret_left_icon.svg">
-          					
-          					<div class="button1">돌아가기</div>
-        				</div>
-      			</div>
-    		</div>
-    		<div class="sticky">
-      			<div class="text-wrapper">
-        				<div class="div7">협업은 부드럽게, 기준은 단단하게.</div>
-        				<b class="b8">신입 데이터 엔지니어 황동혁입니다.</b>
-      			</div>
-      			<div class="wrapper12">
-        				<div class="button2" id="buttonContainer" data-href="../../index.html">
-          					<img class="phosphor-icons-caretleft1" alt="" src="/assets/caret_left_icon.svg">
-          					
-        				</div>
-        				<b class="b9">프로젝트 상세보기</b>
-      			</div>
-    		</div>
-  	</div>
-  	
+	<div class="project-detail-view">
+		<div class="container">
+			<!-- 헤더 카드 -->
+			<div class="project-card">
+				<div class="wrapper">
+					<div class="favicon">
+						<div class="favicon-child favicon-whereshouldwego"></div>
+					</div>
+					<div class="wrapper1">
+						<b class="b">어디갈래?</b>
+						<div class="calendar-wrapper">
+							<img class="icon-frame" alt="" src="/assets/calender_icon.svg">
+							<div class="xxxxx-202xxxxx">2025.07.14 ~ 2025.08.22</div>
+						</div>
+					</div>
+				</div>
+				<div class="wrapper2">
+					<div class="tag">
+						<img class="phosphor-icons-users" alt="" src="/assets/user_blue_icon.svg">
+						<div class="tag1">참여 인원 | 6명</div>
+					</div>
+					<div class="tag2">
+						<img class="phosphor-icons-users" alt="" src="/assets/lightning_blue_icon.svg">
+						<div class="tag1">대표 성과 | 실시간 지도·채팅·추천·투표 통합</div>
+					</div>
+				</div>
+				<div class="link-wrapper">
+					<div class="wrapper3" id="buttonContainer" data-href="https://github.com/whereshouldwego/was"
+						role="link" tabindex="0" aria-label="Git 저장소 열기">
+						<img class="mdigithub-icon" alt="" src="/assets/github_blue_icon.svg">
+						<div class="github">Github</div>
+						<img class="feather-icons-arrow-up-right" alt="" src="/assets/arrow_up_right_blue_icon.svg">
+					</div>
+					<div class="wrapper3" id="buttonContainer"
+						data-href="https://band-cheddar-f06.notion.site/22aefa246e29804ea730f6f523c3050d?source=copy_link"
+						role="link" tabindex="0" aria-label="Notion 문서 열기">
+						<img class="mdinotion-icon" alt="" src="/assets/notion_blue_icon.svg">
+						<div class="notion">notion</div>
+						<img class="feather-icons-arrow-up-right" alt="" src="/assets/arrow_up_right_blue_icon.svg">
+					</div>
+				</div>
+			</div>
 
-  	<script>
-		document.querySelectorAll('[id="buttonContainer"]').forEach((btn) => {
-			const url = btn.dataset.href || './index.html';
+			<!-- 본문 -->
+			<div class="body-contents-wrapper">
 
-			const go = () => { window.location.href = url; };
+				<!-- 1. 프로젝트 개요 -->
+				<div class="wrapper5">
+					<b class="b">
+						<ol class="ol">
+							<li>프로젝트 개요</li>
+						</ol>
+					</b>
+					<div class="divider">
+						<div class="min-height"></div>
+						<div class="divider1"></div>
+					</div>
+					<div class="contents-wrapper">
+						<div class="div">
 
-			btn.addEventListener('click', go);
-			btn.addEventListener('keydown', (e) => {
-			if (e.key === 'Enter' || e.key === ' ') {
-				e.preventDefault();
-				go();
-			}
+							<div class="subheading">기획 배경</div>
+							<ul class="ul">
+								<li>약속 장소를 정할 때 지도·메신저·투표가 흩어져 맥락이 끊기고 결정이 느립니다. 같은 화면에서 <b>지도 탐색·채팅·추천·투표</b>를 동시에
+									처리하고, 채팅 맥락과 리뷰 태그까지 반영하는 흐름이 필요하다고 판단했습니다.</li>
+							</ul>
+							<br>
+
+							<div class="subheading">프로젝트 목표</div>
+							<ul class="ul">
+								<li><b>지도 공유 + 실시간 채팅 + 장소 추천·투표</b>를 하나의 서비스로 통합합니다.</li>
+								<li>채팅 내역 기반 <b>맞춤형 장소 추천</b>을 제공합니다.</li>
+								<li>지도 위에 <b>리뷰 기반 해시태그(분위기/목적 등)</b>를 시각화합니다.</li>
+								<li>사용자는 장소를 <b>찜</b>하여 추후 열람할 수 있습니다.</li>
+							</ul>
+							<br>
+
+							<div class="subheading">팀 구성</div>
+							<ul class="ul">
+								<li>6인 (FE 3 · BE 2 · <b>BE/Infra 1[본인]</b>)</li>
+							</ul>
+							<br>
+
+							<div class="subheading">주요 기능</div>
+							<ul class="ul">
+								<li><b>방 생성 및 초대:</b> 사용자가 방을 만들고 초대 링크를 공유해 실시간 협업 가능</li>
+								<li><b>지도 + 채팅 통합 뷰:</b> 지도 화면 옆에 채팅창을 두어 탐색과 소통을 동시에 진행</li>
+								<li><b>추천 봇:</b> 사용자가 입력한 조건 또는 채팅 내용 기반으로 맞춤 장소 추천</li>
+								<li><b>협업형 지도 탐색:</b> 참여자들이 실시간으로 검색·탐색한 장소를 공유</li>
+								<li><b>투표 및 ‘찜’ 기능:</b> 후보 장소 투표 진행 및 ‘찜’으로 추후 열람 가능</li>
+								<li><b>리뷰 기반 해시태그 제공:</b> 가게 분위기, 방문 목적 등 후기를 해시태그로 시각화</li>
+							</ul>
+							<br>
+
+							<div class="subheading">아키텍처</div>
+							<figure class="img-card">
+								<img class="image lightboxable" src="/assets/whereshouldwego/architecture.png"
+									alt="WhereShouldWeGo 서비스 아키텍처 다이어그램" loading="lazy">
+								<figcaption class="sr-only">
+									WhereShouldWeGo 서비스 아키텍처 다이어그램
+								</figcaption>
+							</figure>
+
+							<div class="subheading">기술 스택</div>
+							<table class="stack-table">
+								<thead>
+									<tr>
+										<th>분야</th>
+										<th>기술 스택</th>
+										<th>설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>프론트엔드</td>
+										<td><span class="badge">React(Vite)</span> <span class="badge">TypeScript</span>
+											<span class="badge">STOMP.js</span>
+										</td>
+										<td>지도·채팅 통합 UI, 실시간 구독/발행, 초대 UX</td>
+									</tr>
+									<tr>
+										<td>백엔드 (REST)</td>
+										<td><span class="badge strong">Spring Boot</span> <span class="badge">Spring
+												Security</span> <span class="badge">FastAPI</span></td>
+										<td>REST API 서비스, 인증·권한</td>
+									</tr>
+									<tr>
+										<td>백엔드 (실시간)</td>
+										<td><span class="badge">Spring WebSocket</span> <span class="badge">STOMP</span>
+											<span class="badge strong">SimpleBroker</span>
+										</td>
+										<td>채팅/후보/투표 라우팅, JWT Handshake</td>
+									</tr>
+									<tr>
+										<td>데이터베이스</td>
+										<td><span class="badge strong">PostgreSQL</span> <span
+												class="badge strong">MongoDB</span></td>
+										<td>운영 데이터, 채팅 로그 저장</td>
+									</tr>
+									<tr>
+										<td>인프라</td>
+										<td><span class="badge strong">Docker/Compose</span> <span
+												class="badge strong">Nginx</span> <span class="badge">Jenkins</span>
+											<span class="badge strong">EC2</span>
+										</td>
+										<td>배포 자동화, 라우팅, 컨테이너 오케스트레이션</td>
+									</tr>
+									<tr>
+										<td>협업</td>
+										<td><span class="badge">GitLab</span> <span
+												class="badge strong">Mattermost</span> <span class="badge">Jira</span>
+										</td>
+										<td>형상 관리, 실시간 협업, 일정 관리</td>
+									</tr>
+								</tbody>
+							</table>
+
+
+							<div class="subheading">시연</div>
+							<div class="demo-grid">
+								<div class="project-card">
+									<video class="video lightboxable" autoplay loop muted playsinline preload="metadata"
+										poster="/assets/whereshouldwego/커서공유기능.jpg">
+										<source src="/assets/whereshouldwego/커서공유기능.mp4" type="video/mp4" />
+										브라우저가 video 태그를 지원하지 않습니다.
+									</video>
+								</div>
+								<div class="project-card">
+									<video class="video lightboxable" autoplay loop muted playsinline preload="metadata"
+										poster="/assets/whereshouldwego/핀공유기능.jpg">
+										<source src="/assets/whereshouldwego/핀공유기능.mp4" type="video/mp4" />
+										브라우저가 video 태그를 지원하지 않습니다.
+									</video>
+								</div>
+								<div class="project-card">
+									<video class="video lightboxable" autoplay loop muted playsinline preload="metadata"
+										poster="/assets/whereshouldwego/실시간채팅.jpg">
+										<source src="/assets/whereshouldwego/실시간채팅.mp4" type="video/mp4" />
+										브라우저가 video 태그를 지원하지 않습니다.
+									</video>
+								</div>
+								<div class="project-card">
+									<video class="video lightboxable" autoplay loop muted playsinline preload="metadata"
+										poster="/assets/whereshouldwego/후보지선정기능.jpg">
+										<source src="/assets/whereshouldwego/후보지선정기능.mp4" type="video/mp4" />
+										브라우저가 video 태그를 지원하지 않습니다.
+									</video>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!-- 2. 역할 및 기여도 -->
+				<div class="wrapper5">
+					<b class="b">
+						<ol class="ol" start="2">
+							<li>역할 및 기여도</li>
+						</ol>
+					</b>
+					<div class="divider">
+						<div class="min-height"></div>
+						<div class="divider1"></div>
+					</div>
+					<div class="contents-wrapper">
+						<div class="div">
+							<ul class="ul">
+								<li><b>실시간 통신 뼈대 설계/구현</b>: STOMP(채팅/후보)와 Raw WebSocket(커서)로 분리했습니다.</li>
+								<li><b>인증/입장 제어</b>: 연결 시 <b>JWT 확인</b>, 세션 당 <b>1개 방만 허용</b>했습니다.</li>
+								<li><b>채팅·후보 API</b>: 채팅은 <b>MongoDB 저장/조회</b>, 후보·투표는 <b>PostgreSQL 집계/정렬</b>로 나눴습니다.
+								</li>
+								<li><b>배포 자동화</b>: Jenkins 파이프라인과 Docker Compose로 <b>교체 배포</b>를 만들었습니다.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- 3. 개발 상세 내용 -->
+				<div class="wrapper5">
+					<b class="b">
+						<ol class="ol" start="3">
+							<li>개발 상세</li>
+						</ol>
+					</b>
+					<div class="divider">
+						<div class="min-height"></div>
+						<div class="divider1"></div>
+					</div>
+					<div class="contents-wrapper">
+						<div class="div">
+							<details>
+								<summary><b>3.1. STOMP 기반 실시간 채팅 및 실시간 후보 공유</b></summary>
+								<div class="content">
+									<h4>배경</h4>
+									<p>
+										채팅·후보·투표를 한 화면에서 다루려면, 메시지를 <b>주제별로 분리</b>해 낮은 지연으로 브로드캐스트하고,
+										<b>연결 시점 인증</b>으로 접근을 제어해야 합니다.
+									</p>
+
+									<h4>도전</h4>
+									<ul class="ul">
+										<li>같은 방에서 여러 유형의 데이터가 동시에 오가므로 <b>토픽 분리</b>가 필요합니다.</li>
+										<li>방(Room) 단위 <b>저지연 브로드캐스트</b>가 필요합니다.</li>
+										<li>채팅은 로그 성격(빠른 쓰기/조회), 후보·투표는 <b>집계/정렬</b>이 중요합니다.</li>
+									</ul>
+
+									<h4>해결 방안</h4>
+
+									<figure class="img-card">
+										<img class="image lightboxable"
+											src="/assets/whereshouldwego/sequence_diagram_stomp.png"
+											alt="WhereShouldWeGo sequence_diagram_stomp" loading="lazy">
+										<figcaption class="sr-only">
+											WhereShouldWeGo sequence_diagram_stomp
+										</figcaption>
+									</figure>
+
+									<ul class="ul">
+										<li>STOMP(Simple Text Oriented Messaging Protocol) 채택:
+											<pre><code>SEND : /app/chat.{roomCode}</code></pre>
+											<pre><code>SUB  : /topic/chat.{roomCode}</code></pre>
+											<pre><code>SEND : /app/candidate.{roomCode}</code></pre>
+											<pre><code>SUB  : /topic/candidate.{roomCode}</code></pre>
+										</li>
+										<li><b>인증/입장 제어</b>
+											<pre><code>StompAuthInterceptor</code></pre>
+											<ul>
+												<li><b>CONNECT</b>: 토큰 검증 →
+													<code>Authentication(principal=CustomUserDetails{userId, role})</code>
+													주입
+												</li>
+												<li><b>SUBSCRIBE</b>: <code>roomCode→roomId</code> 추출 →
+													<code>existsByRoomIdAndUserId(roomId,userId)</code>로 멤버십 1회 검증
+												</li>
+												<li><b>SEND</b>: 이 세션의 현재 방과 목적지 방이 동일할 때만 통과</li>
+												<li><b>DISCONNECT</b>: 세션 상태 정리</li>
+											</ul>
+										</li>
+										<li>한 소켓 = 한 방 (세션 게이트)
+											<pre><code>sessionCurrentRoom : sessionId -> roomId</code></pre>
+											<pre><code>sessionSubRoom : sessionId -> (subscriptionId -> roomId)</code></pre>
+											첫 구독 시 방 고정, 다른 방으로 구독/전송 시도는 예외로 거절
+										</li>
+										<li>데이터 저장소
+											<ul>
+												<li><b>채팅</b>: MongoDB (컬렉션: <code>Chat</code>, 인덱스
+													<code>roomCode, createdAt</code>)
+												</li>
+												<li><b>후보/투표</b>: PostgreSQL (<code>Candidate</code>, <code>Vote</code>)
+													— 후보 조회
+													시 득표수 집계 후 정렬로 응답</li>
+											</ul>
+										</li>
+										<li>입장 시 <b>REST</b>로 과거 채팅/후보 히스토리 조회 후 UI 초기 동기화</li>
+									</ul>
+
+									<h4>성과</h4>
+									<ul class="ul">
+										<li><b>토픽 분리</b>로 채팅과 후보/투표를 <b>한 세션에서 병행</b>, 로그 기반 측정에서 평균 지연을 약 200ms 이하로 유지했습니다.</li>
+										<li><b>연결 시 인증</b>과 <b>한 세션-한 방 정책</b>으로 오남용을 차단했습니다.</li>
+										<li>데이터 특성에 맞춘 저장소로 <b>속도와 정합성</b>을 동시에 확보했습니다.</li>
+									</ul>
+								</div>
+							</details>
+
+							<details>
+								<summary><b>3.2. WebSocket 기반 실시간 마우스 커서 공유</b></summary>
+								<div class="content">
+									<h4>배경</h4>
+									<ul class="ul">
+										<li>지도 기반 협업 시, 각 사용자가 어떤 영역을 보고 있는지 시각적으로 파악하면 의사소통 효율이 크게 향상되어 커서 공유 기능이
+											필요합니다.
+										</li>
+										<li>마우스 커서 위치는 초당 수십 건 이상 발생하는 <b>고빈도 이벤트</b>이므로, 채팅과 같은 프로토콜로 처리하면 불필요한 오버헤드가
+											커집니다.
+										</li>
+									</ul>
+
+									<h4>도전</h4>
+									<ul class="ul">
+										<li><b>지연을 최소화</b>하면서 동일 방 사용자에게 빠르게 전파해야 합니다.</li>
+										<li><b>Handshake 단계 인증</b>과 <b>세션 정리</b>가 필요합니다.</li>
+									</ul>
+
+									<h4>해결 방안</h4>
+									<figure class="img-card">
+										<img class="image lightboxable"
+											src="/assets/whereshouldwego/sequence_diagram_websocket.png"
+											alt="WhereShouldWeGo sequence_diagram_websocket" loading="lazy">
+										<figcaption class="sr-only">
+											WhereShouldWeGo sequence_diagram_websocket
+										</figcaption>
+									</figure>
+
+									<ul class="ul">
+										<li><b>Raw WebSocket</b> 채택:
+											<ul>
+												<li>STOMP보다 경량화된 양방향 통신 프로토콜로, 불필요한 헤더 없이 <b>순수 텍스트/바이너리 데이터 송수신</b> 가능.
+												</li>
+												<li>고빈도·저용량 메시지 처리에 적합해 커서 위치 전송에 최적.</li>
+											</ul>
+										</li>
+										<li>엔드포인트: <code>/ws-raw/cursor?roomCode=...&amp;token=Bearer…</code></li>
+										<li>인증 인가
+											<ul>
+												<li>Handshake: 토큰·roomCode 검증 →
+													<code>roomId, userId, nickname, auth</code>를
+													<b>세션 Attribute</b>로 저장
+												</li>
+												<li>멤버십: <code>existsByRoomIdAndUserId(roomId,userId)</code> <b>통과
+														시</b>만 연결
+												</li>
+											</ul>
+										</li>
+										<li>세션/브로드캐스트
+											<pre><code>roomSessions : roomCode -> Set&lt;WebSocketSession&gt;
+sessionRoomMap : sessionId -> roomCode</code></pre>
+											<ul>
+												<li>전송: 비동기 <code>TaskExecutor</code> + 세션별
+													<code>synchronized(session)</code>로
+													안전 송신
+												</li>
+												<li>중복 접속 차단(레지스트리):
+													<pre><code>byPair["roomId:userId"] = WebSocketSession</code></pre>
+													새 연결이 오면 <b>기존 세션 즉시 종료(POLICY_VIOLATION)</b>
+												</li>
+											</ul>
+										</li>
+										<li>STOMP와의 싱크
+											<ul>
+												<li>STOMP <code>DISCONNECT</code> 이벤트에서 <code>(roomId,userId)</code>를 찾아
+												</li>
+												<li><code>RawWebSocketSessionRegistry.closeIfPresent(roomId,userId)</code>
+													호출 →
+													Raw WS 자동 종료</li>
+											</ul>
+										</li>
+									</ul>
+
+									<h4>성과</h4>
+									<ul class="ul">
+										<li>커서를 <b>평균 50ms 단위</b>로 동기화했고, 로그 측정에서 동시 접속 30명 환경에서도 지연 없이 동작했습니다.</li>
+										<li>STOMP 채널과 분리되어 채팅/후보 트래픽과 <b>서로 영향 없이</b> 동작합니다.</li>
+									</ul>
+								</div>
+							</details>
+
+							<details>
+								<summary><b>3.3. Infra 구축</b></summary>
+								<div class="content">
+									<h4>배경</h4>
+									<ul class="ul">
+										<li>서비스는 AWS EC2(16GB 디스크) 한 대에서 운영해야 했습니다.</li>
+										<li>Spring Boot 백엔드, React 프론트엔드, Nginx, MongoDB(채팅 저장), Jenkins, PostgreSQL 등을
+											모두
+											같은
+											인스턴스에서 띄워야 합니다.</li>
+										<li>서비스 특성상 <b>장소 데이터와 장소 벡터 데이터</b>를 저장해야 하므로, DB 용량 사용량이 클 것으로 예상되었습니다.</li>
+									</ul>
+
+									<h4>도전</h4>
+									<ul class="ul">
+										<li>제한된 디스크(16GB)에서 모든 서비스와 데이터 저장소를 운영할 경우, <b>용량 부족</b> 및 성능 저하 가능성이 있습니다.
+										</li>
+										<li>초기 사용자 수가 적어도 확장 가능성을 유지하면서도 <b>불필요한 외부 서비스 도입으로 리소스 낭비를 방지</b>해야 합니다.</li>
+										<li>실시간 기능 구현에 필요한 브로커(예: RabbitMQ, Redis Pub/Sub) 사용 여부 판단해야 합니다.</li>
+									</ul>
+
+									<h4>해결 방안</h4>
+									<ul class="ul">
+										<li>데이터베이스 부하와 디스크 점유를 줄이기 위해 <b>AWS RDS를 별도로 구축</b>해 PostgreSQL을 외부로 분리.
+											<ul>
+												<li>EC2에는 MongoDB만 남겨 채팅 기록을 저장하고, 대용량의 장소 데이터/벡터는 RDS에 저장.</li>
+											</ul>
+										</li>
+										<li>실시간 메시징은 <b>Spring Simple Broker</b>를 사용해 EC2 내에서 처리.
+											<ul>
+												<li>초기 트래픽이 낮고, 메시지 영속성이 필수가 아니므로 RabbitMQ, Redis 등 외부 브로커는 도입하지 않습니다.
+												</li>
+											</ul>
+										</li>
+										<li>모든 서비스는 <b>Docker Compose</b>로 컨테이너화해 관리, 필요 시 개별 서비스 재시작·확장 가능하도록 설계.</li>
+									</ul>
+
+									<h4>성과</h4>
+									<ul class="ul">
+										<li>RDS 분리로 EC2 디스크 점유율을 크게 줄였고, <b>운영 복잡도</b>를 낮췄습니다.</li>
+										<li>외부 브로커는 필요 시 수평 확장이 가능한 구조로 설계했습니다.</li>
+									</ul>
+								</div>
+							</details>
+
+							<details>
+								<summary><b>3.4. CI/CD 구축</b></summary>
+								<div class="content">
+									<h4>배경</h4>
+									<ul class="ul">
+										<li>프로젝트는 <b>GitLab</b> 저장소에서 진행했고, 제공된 <b>EC2 서버</b>를 배포해야 했습니다.</li>
+										<li>원래는 GitLab CI/CD를 활용할 수 있었지만, <b>교육 환경에서 GitLab CI/CD 기능이 차단</b>되어 사용 불가합니다.
+										</li>
+										<li>대신 EC2에 <b>Docker로 Jenkins를 띄워</b> 빌드·배포 자동화를 직접 구성해야 했습니다.</li>
+									</ul>
+
+									<h4>도전</h4>
+									<ul class="ul">
+										<li>GitLab CI/CD를 쓸 수 없으니 <b>외부에서 브랜치 감지, 빌드, 배포</b>를 모두 처리해야 합니다.</li>
+										<li>Jenkins와 운영 서버(EC2)가 동일 환경이라 <b>빌드 과정과 운영 서비스 간 리소스 충돌</b> 가능성 존재했습니다.</li>
+										<li>프론트엔드와 백엔드가 각각 다른 GitLab 브랜치(<code>develop/front</code>,
+											<code>develop/back</code>)에
+											있어 <b>동시에 빌드·배포</b>해야 합니다.
+										</li>
+									</ul>
+
+									<h4>해결 방안</h4>
+									<ul class="ul">
+										<li>EC2에 Docker 기반 Jenkins 컨테이너 실행.</li>
+										<li>Jenkins Pipeline을 작성해 다음 절차를 자동화:
+											<ol>
+												<li><b>FE/BE 병렬 처리</b>:
+													<ul>
+														<li>각 브랜치를 GitLab에서 clone</li>
+														<li>Dockerfile 기반 멀티 스테이지 빌드</li>
+														<li>빌드 산출물 이미지를 Docker Hub에 푸시</li>
+													</ul>
+												</li>
+												<li><b>배포 서버 업데이트</b>:
+													<ul>
+														<li>Jenkins에서 EC2 로컬의 <code>docker-compose.yml</code>을 유지</li>
+														<li>새로운 이미지로 <code>docker compose pull</code> →
+															<code>docker compose up -d</code>로 교체 배포
+														</li>
+													</ul>
+												</li>
+											</ol>
+										</li>
+										<li>Jenkins Credentials를 통해 API Key, Docker Hub 계정 등 <b>민감 정보 안전하게 주입</b>.</li>
+									</ul>
+
+									<h4>성과</h4>
+									<ul class="ul">
+										<li>GitLab CI/CD 없이도 <b>EC2 단일 서버 환경에서 빌드·배포 자동화</b>가 가능했습니다.</li>
+										<li>FE/BE 병렬 빌드로 전체 파이프라인 시간을 <b>약 40%</b> 단축했습니다. (빌드 로그 기준)</li>
+										<li>Docker Hub와 Compose를 활용해 배포 다운타임을 수 초 이내로 줄였고, 롤백도 즉시 가능했습니다.</li>
+									</ul>
+								</div>
+							</details>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="wrapper5">
+					<b class="b">
+						<ol class="ol" start="4">
+							<li>회고</li>
+						</ol>
+					</b>
+					<div class="divider">
+						<div class="min-height"></div>
+						<div class="divider1"></div>
+					</div>
+					<div class="contents-wrapper">
+						<div class="div">
+							<ul class="ul">
+								<li><b>기술 선택의 트레이드오프 체감</b>: 단일 서버 환경에서 Redis나 RabbitMQ 대신 SimpleBroker를 채택해 초기 트래픽 요구에는
+									충분했지만, 확장성 한계를 직접 경험했습니다. 트래픽 수준에 따라 아키텍처를 유연하게 바꿔야 한다는 점을 배웠습니다.</li>
+								<li><b>데이터 특성에 맞는 저장소 분리</b>: 채팅 로그는 MongoDB, 투표/후보는 PostgreSQL로 나누어 처리하며, 데이터 성격에 따라
+									저장소를 구분해야 성능과 관리 효율을 동시에 확보할 수 있음을 배웠습니다.</li>
+								<li><b>운영 환경 제약 속 문제 해결</b>: 16GB 디스크 제한, GitLab CI/CD 차단 등 제약 조건 속에서 Jenkins+Docker
+									Compose로 배포 자동화를 구축하며, 완벽한 이상형 아키텍처보다 주어진 자원 안에서 안정적이고 재현 가능한 구조 설계가 중요함을 느꼈습니다.
+								</li>
+								<li><b>협업과 문서화의 가치</b>: 실시간 기능 설계를 다이어그램·노션 문서로 공유하면서 팀원 간 이해도가 높아졌고, 유지보수가 수월해졌습니다.
+									협업에서는 문서화와 시각화가 핵심임을 배웠습니다.</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+
+				<!-- 하단 버튼 -->
+				<div class="btn-wrapper">
+					<div class="button" id="buttonContainer" data-href="../../index.html" role="link" tabindex="0"
+						aria-label="목록으로 돌아가기">
+						<img class="phosphor-icons-users" alt="" src="/assets/caret_left_icon.svg">
+						<div class="button1">돌아가기</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sticky">
+			<div class="text-wrapper">
+				<div class="div7">협업은 부드럽게, 기준은 단단하게.</div>
+				<b class="b8">신입 데이터 엔지니어 황동혁입니다.</b>
+			</div>
+			<div class="wrapper12">
+				<div class="button2" id="buttonContainer" data-href="../../index.html" role="link">
+					<img class="phosphor-icons-caretleft1" alt="" src="/assets/caret_left_icon.svg">
+
+				</div>
+				<b class="b9">프로젝트 상세보기</b>
+			</div>
+		</div>
+
+		<script>
+			document.querySelectorAll('[id="buttonContainer"]').forEach((btn) => {
+				const url = btn.dataset.href || './index.html';
+				const go = () => { window.location.href = url; };
+				btn.addEventListener('click', go);
+				btn.addEventListener('keydown', (e) => {
+					if (e.key === 'Enter' || e.key === ' ') {
+						e.preventDefault();
+						go();
+					}
+				});
 			});
-		});
-	</script></body>
+
+			(function () {
+				// 오버레이 DOM 생성
+				const overlay = document.createElement('div');
+				overlay.className = 'lightbox-overlay';
+				overlay.innerHTML = `
+    <div class="lightbox-content" tabindex="-1" role="dialog" aria-modal="true">
+      <button class="lightbox-close" aria-label="닫기">✕</button>
+    </div>
+  `;
+				document.body.appendChild(overlay);
+
+				const content = overlay.querySelector('.lightbox-content');
+				const closeBtn = overlay.querySelector('.lightbox-close');
+
+				function getVideoSrc(el) {
+					const s = el.querySelector('source');
+					return (s && s.src) || el.currentSrc || el.src;
+				}
+
+				function openLightbox(el) {
+					// 기존 미디어 제거
+					content.querySelectorAll('img,video').forEach(n => n.remove());
+
+					let node;
+					if (el.tagName.toLowerCase() === 'img') {
+						node = document.createElement('img');
+						node.src = el.src;
+						node.alt = el.alt || '';
+					} else {
+						node = document.createElement('video');
+						node.src = getVideoSrc(el);
+						node.autoplay = true;
+						node.loop = true;
+						node.muted = true;
+						node.playsInline = true;
+						node.controls = true;
+					}
+
+					content.appendChild(node);
+					overlay.style.display = 'flex';
+					document.body.classList.add('lb-open');
+					content.focus();
+				}
+
+				function closeLightbox() {
+					overlay.style.display = 'none';
+					document.body.classList.remove('lb-open');
+					content.classList.remove('cover'); // cover 모드 해제
+					const v = content.querySelector('video');
+					if (v) { try { v.pause(); } catch (e) { } }
+				}
+
+				// 위임 클릭으로 열기
+				document.addEventListener('click', (e) => {
+					const t = e.target.closest('.lightboxable');
+					if (t) {
+						e.preventDefault();
+						openLightbox(t);
+					}
+				});
+
+				// 배경 클릭으로 닫기
+				overlay.addEventListener('click', (e) => {
+					if (e.target === overlay) closeLightbox();
+				});
+
+				closeBtn.addEventListener('click', closeLightbox);
+
+				// ESC 닫기
+				document.addEventListener('keydown', (e) => {
+					if (overlay.style.display === 'flex' && e.key === 'Escape') closeLightbox();
+				});
+
+				// Z 키 or 미디어 클릭으로 contain ↔ cover 전환
+				function toggleFitMode() {
+					content.classList.toggle('cover');
+				}
+
+				content.addEventListener('click', (e) => {
+					const media = e.target.closest('img,video');
+					if (media) toggleFitMode();
+				});
+
+				document.addEventListener('keydown', (e) => {
+					if (overlay.style.display === 'flex' && (e.key === 'z' || e.key === 'Z')) {
+						toggleFitMode();
+					}
+				});
+			})();
+		</script>
+
+</body>
+
 </html>

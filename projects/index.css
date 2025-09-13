@@ -1,13 +1,21 @@
 .favicon-child {
-  	position: absolute;
-  	top: 0px;
-  	left: 0px;
-  	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  	border-radius: 16px;
-  	background-color: #f1f5f9;
-  	width: 64px;
-  	height: 64px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  background-color: #f1f5f9;
+  width: 64px;
+  height: 64px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+.favicon-whereshouldwego { background-image: url('/assets/whereshouldwego/whereshouldwego.png'); }
+.favicon-klyde { background-image: url('/assets/klyde/klyde.png'); }
+.favicon-ssabab { background-image: url('/assets/ssabab/ssabab.png'); }
+
 .favicon {
   	width: 64px;
   	position: relative;
@@ -164,7 +172,10 @@
   	font-family: inherit;
   	font-size: inherit;
   	padding-left: 37px;
+
+	counter-reset: sublist 0;
 }
+
 .min-height {
   	width: 0px;
   	position: relative;
@@ -336,11 +347,293 @@
   	width: 100%;
   	position: relative;
   	background-color: #fff;
-  	height: 2672px;
-  	overflow: hidden;
   	text-align: left;
   	font-size: 28px;
   	color: #475569;
   	font-family: Pretendard;
 }
 
+
+/* 단일 이미지 (예: 아키텍처 다이어그램) */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  object-fit: contain;   /* 원본 비율 */
+  background: #fff;      /* 다크 모드 대비 */
+}
+
+/* 이미지 카드(단일 이미지용) */
+.img-card {
+  width: 100%;
+  max-width: 720px;
+  margin: 16px auto;
+}
+
+/* 2x2 그리드 */
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 960px;
+}
+
+/* 반응형: 모바일 1열 */
+@media (max-width: 640px) {
+  .demo-grid { grid-template-columns: 1fr; }
+}
+
+/* 타일 모양 고정 (16:9) */
+.demo-grid .project-card {
+  padding: 0;
+  background: #fff;       /* 로딩 중 배경 (흰색으로 변경) */
+  box-shadow: none;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;   /* 16:9 고정 */
+  display: flex;          /* 내부 미디어 중앙 정렬 */
+  align-items: center;
+  justify-content: center;
+}
+
+/* GIF(img) + Video(video) 공통 */
+.demo-grid .project-card img.video,
+.demo-grid .project-card video.video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;    /* 잘림 없이 전체 표시 (여백 생길 수 있음) */
+  display: block;
+  border-radius: 0;
+  background: #fff;       /* 여백을 흰색으로 */
+}
+
+/* 라이트박스 썸네일 힌트 */
+.lightboxable { cursor: zoom-in; }
+
+/* 사용자 ‘동작 감소’ 설정 시 자동재생 최소화 */
+@media (prefers-reduced-motion: reduce) {
+  .demo-grid .video { animation: none; }
+}
+
+/* 라이트박스 오버레이 */
+.lightbox-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.85);
+  backdrop-filter: blur(2px);
+  display: none;
+  align-items: center; justify-content: center;
+  z-index: 9999;
+}
+
+/* 라이트박스 콘텐츠 */
+.lightbox-content {
+  position: relative;
+  max-width: min(1100px, 90vw);
+  max-height: 85vh;
+  outline: none;
+}
+
+/* 라이트박스 공통 미디어 */
+.lightbox-content img,
+.lightbox-content video {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;  /* 확대 전 기본은 contain */
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.35);
+  display: block;
+  cursor: zoom-in;
+  background: #fff;
+}
+
+/* cover 모드 (꽉 채우기) */
+.lightbox-content.cover img,
+.lightbox-content.cover video {
+  width: 100%;
+  height: 85vh;
+  object-fit: cover;
+  cursor: zoom-out;
+}
+
+/* 닫기 버튼 */
+.lightbox-close {
+  position: absolute;
+  top: -12px; right: -12px;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.9);
+  border: 1px solid rgba(0,0,0,.1);
+  display: grid; place-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* body 스크롤 잠금 */
+body.lb-open { overflow: hidden; }
+
+
+
+/* 썸네일 힌트 */
+.lightboxable { cursor: zoom-in; }
+
+
+/* h4 구분 강조 */
+.div h4 {
+  font-size: 20px;
+  margin: 24px 0 12px;
+  font-weight: 700;
+  color: #0f172a;
+  border-left: 4px solid #0ea5e9;
+  padding-left: 8px;
+}
+
+/* 리스트 */
+.div .ul {
+  margin: 8px 0 16px;
+  padding-left: 24px;
+  color: #334155;
+  line-height: 1.6;
+}
+.div .ul li { margin-bottom: 6px; }
+
+/* 코드 블럭 */
+.div pre {
+  background: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 6px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid #e2e8f0;
+}
+.div code {
+  font-family: "Fira Code", "Consolas", monospace;
+  color: #0369a1;
+  font-size: 14px;
+}
+
+/* inline code */
+.div li code,
+.div p code {
+  background: #f1f5f9;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+
+.stack-table {
+  width: 100%;
+  max-width: 960px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 15px;
+  margin: 16px 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.stack-table thead {
+  background: #f1f5f9;
+}
+.stack-table thead th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #0f172a;
+  border-bottom: 1px solid #e2e8f0;
+}
+.stack-table tbody td {
+  padding: 12px 16px;
+  border-top: 1px solid #f1f5f9;
+  vertical-align: top;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* 뱃지 스타일 */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  margin: 2px 4px 2px 0;
+  border-radius: 20px;
+  background: #f1f5f9;
+  color: #0369a1;
+  font-size: 13px;
+  font-weight: 500;
+}
+.badge.strong {
+  background: #e0f2fe;
+  color: #0c4a6e;
+  font-weight: 600;
+}
+
+
+
+
+/* 토글(아코디언) 스타일 */
+details {
+  width: 100%;
+  margin: 8px 0;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+  overflow: hidden;
+  transition: box-shadow .2s ease;
+}
+
+details[open] {
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  background: #fff;
+}
+
+details summary {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #0f172a;
+  list-style: none;   /* 기본 화살표 제거 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+details summary::after {
+  content: "▶";
+  font-size: 14px;
+  color: #64748b;
+  transition: transform .2s ease;
+}
+
+details[open] summary::after {
+  transform: rotate(90deg);
+  color: #0ea5e9;
+}
+
+details .content {
+  padding: 16px 20px 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #334155;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* hover / focus 시 효과 */
+details summary:hover {
+  background: rgba(3,105,161,.04);
+}
+details summary:focus-visible {
+  outline: 2px solid #0ea5e9;
+  outline-offset: 2px;
+}
