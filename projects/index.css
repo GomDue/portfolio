@@ -219,13 +219,41 @@
   	color: #64748b;
 }
 .wrapper5 {
-  	align-self: stretch;
-  	display: flex;
-  	flex-direction: column;
-  	align-items: flex-start;
-  	justify-content: flex-start;
-  	gap: 16px;
-  	min-width: 360px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+  min-width: 360px;
+
+  /* ✨ 강조 추가 */
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 32px 28px;
+  margin-bottom: 48px;
+}
+.wrapper5 > b {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+  padding-left: 0;  /* 숫자만 남기고 들여쓰기 제거 */
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+/* ========== 소제목 (배경·도전·해결 방안·성과 / 기획 배경·목표 등) ========== */
+.subheading,
+.div h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 24px 0 12px;
+  border-left: 4px solid #0ea5e9;
+  padding-left: 10px;
+  background: linear-gradient(to right, rgba(14,165,233,.08), transparent);
+  border-radius: 4px;
 }
 .body-contents-wrapper {
   	width: 100%;
@@ -336,7 +364,7 @@
   	align-items: center;
   	justify-content: center;
   	gap: 10px;
-  	background-image: url('/assets/Sticky.png');
+  	/* background-image: url('/assets/Sticky.png'); */
   	background-size: cover;
   	background-repeat: no-repeat;
   	background-position: top;
@@ -493,13 +521,22 @@ body.lb-open { overflow: hidden; }
 }
 
 /* 리스트 */
-.div .ul {
-  margin: 8px 0 16px;
-  padding-left: 24px;
+.div .ul,
+.ul {
+  margin: 8px 0 20px;
+  padding: 12px 20px 12px 32px;
+  border-radius: 8px;
   color: #334155;
   line-height: 1.6;
 }
-.div .ul li { margin-bottom: 6px; }
+.div .ul li,
+.ul li {
+  margin-bottom: 8px;
+}
+.div .ul li:last-child,
+.ul li:last-child {
+  margin-bottom: 0;
+}
 
 /* 코드 블럭 */
 .div pre {

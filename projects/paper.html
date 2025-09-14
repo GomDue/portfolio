@@ -228,36 +228,32 @@
 				<div class="wrapper5">
 					<b class="b">
 						<ol class="ol" start="3">
-							<li>주요 기능</li>
+							<li>개발 상세</li>
 						</ol>
 					</b>
+					<div class="divider">
+						<div class="min-height"></div>
+						<div class="divider1"></div>
+					</div>
 					<div class="contents-wrapper">
-						<div class="wrapper5">
-							<b class="b">
-								<ol class="ol">
-									<li>데이터 수집·정제 배경</li>
-								</ol>
-							</b>
-							<div class="divider">
-								<div class="min-height"></div>
-								<div class="divider1"></div>
-							</div>
-							<div class="contents-wrapper">
-								<div class="div">
+						<div class="div">
 
-									<div class="subheading">배경</div>
+							<details>
+								<summary><b>3.1. 데이터 수집·정제 배경</b></summary>
+								<div class="content">
+									<h4>배경</h4>
 									<ul class="ul">
 										<li>기업 분식회계 탐지를 위해서는 <b>정확하고 신뢰성 있는 재무 데이터</b>와 <b>분식 여부 라벨</b>이 필수였습니다.</li>
 										<li>데이터를 직접 생성할 수 없기 때문에, 공신력 있는 기관 데이터를 활용해 <b>재현성과 신뢰성</b>을 확보해야 했습니다.</li>
 									</ul>
 
-									<div class="subheading">도전</div>
+									<h4>도전</h4>
 									<ul class="ul">
 										<li>재무제표 항목명은 기업마다 다르고, 공시 연도에 따라 표기 방식이 조금씩 달라서 <b>데이터 불일치</b> 문제가 있었습니다.</li>
 										<li>여러 해에 걸쳐 동일 기업 데이터를 합치면서 누락 항목 처리와 중복 제거도 필요했습니다.</li>
 									</ul>
 
-									<div class="subheading">해결 방안</div>
+									<h4>해결 방안</h4>
 									<ul class="ul">
 										<li><b>데이터 출처</b>:
 											<ul>
@@ -274,136 +270,103 @@
 										</li>
 									</ul>
 
-									<div class="subheading">성과</div>
+									<h4>성과</h4>
 									<ul class="ul">
-										<li>분석에 필요한 <b>정량 재무 데이터 + 신뢰성 있는 라벨</b>을 확보했고,</li>
-										<li>가공 전 435개 변수 → 표준화된 구조로 변환 완료.</li>
+										<li>분석에 필요한 <b>정량 재무 데이터 + 신뢰성 있는 라벨</b>을 확보했습니다.</li>
+										<li>가공 전 435개 변수 → 표준화된 구조로 변환을 완료했습니다.</li>
 									</ul>
-
 								</div>
-							</div>
-						</div>
-					</div>
-					<div class="contents-wrapper">
-						<div class="wrapper5">
-							<b class="b">
-								<ol class="ol">
-									<li>전처리 설계 이유</li>
-								</ol>
-							</b>
-							<div class="divider">
-								<div class="min-height"></div>
-								<div class="divider1"></div>
-							</div>
-							<div class="contents-wrapper">
-								<div class="div">
+							</details>
 
-									<div class="subheading">배경</div>
+
+							<details>
+								<summary><b>3.2. 전처리 설계 이유</b></summary>
+								<div class="content">
+									<h4>배경</h4>
 									<ul class="ul">
-										<li>원본 데이터(435개 변수)는 너무 많아서, 불필요한 피처를 제거하지 않으면 학습 속도가 느리고 과적합 가능성이 높았습니다.</li>
-										<li>또한 ANN(인공신경망)과 RF(랜덤포레스트)는 입력 데이터 스케일과 특성에 따라 성능 차이가 나기 때문에 <b>피처 가공</b>이
+										<li>원본 데이터(435개 변수)는 너무 많아, 불필요한 피처를 제거하지 않으면 학습 속도가 느려지고 과적합 가능성이 높았습니다.</li>
+										<li>또한 ANN(인공신경망)과 RF(랜덤포레스트)는 입력 데이터의 스케일과 특성에 따라 성능 차이가 발생하기 때문에 <b>피처 가공</b>이
 											필요했습니다.</li>
 									</ul>
 
-									<div class="subheading">도전</div>
+									<h4>도전</h4>
 									<ul class="ul">
-										<li>변수 개수가 많아 모델 복잡도 증가 및 해석 어려움</li>
-										<li>분식 기업 비율이 매우 낮아 학습 시 <b>불균형 문제</b> 발생 → Recall(재현율) 저하</li>
+										<li>변수 개수가 많아 모델 복잡도가 증가하고 해석이 어려웠습니다.</li>
+										<li>분식 기업 비율이 매우 낮아 학습 시 <b>불균형 문제</b>가 발생하였고, 이로 인해 Recall(재현율)이 저하될 우려가 있었습니다.
+										</li>
 									</ul>
 
-									<div class="subheading">해결 방안</div>
+									<h4>해결 방안</h4>
 									<ul class="ul">
-										<li><b>피처 선택</b>: RFECV(Recursive Feature Elimination with Cross-Validation)로 상위
-											100여 개 중요한 피처만 선별</li>
-										<li><b>파생 지표 생성</b>: 절대값 대신 부채비율, 유동비율, 영업이익률 등 의미 있는 재무비율 생성</li>
-										<li><b>정규화</b>: ANN·RF 모두 잘 학습되도록 MinMaxScaler로 스케일 조정</li>
-										<li><b>불균형 처리</b>: SMOTE(Synthetic Minority Oversampling Technique)로 소수 클래스(분식
-											기업) 오버샘플링</li>
+										<li><b>피처 선택</b>: RFECV(Recursive Feature Elimination with Cross-Validation)을
+											적용하여 상위 약 100개의 중요한 피처만 선별하였습니다.</li>
+										<li><b>파생 지표 생성</b>: 절대값 대신 부채비율, 유동비율, 영업이익률 등 의미 있는 재무비율을 생성하였습니다.</li>
+										<li><b>정규화</b>: ANN과 RF가 모두 안정적으로 학습될 수 있도록 MinMaxScaler로 입력 스케일을 조정하였습니다.</li>
+										<li><b>불균형 처리</b>: SMOTE(Synthetic Minority Oversampling Technique)를 적용하여 소수
+											클래스(분식 기업)를 오버샘플링하였습니다.</li>
 									</ul>
 
-									<div class="subheading">성과</div>
+									<h4>성과</h4>
 									<ul class="ul">
-										<li>불필요한 변수를 제거하고 중요한 재무 지표 중심으로 구성 → 모델 학습 효율 향상</li>
-										<li>SMOTE로 클래스 균형을 맞춰 Recall 저하 방지</li>
+										<li>불필요한 변수를 제거하고 중요한 재무 지표 중심으로 데이터를 구성하여 <b>모델 학습 효율을 향상</b>시켰습니다.</li>
+										<li>SMOTE를 통해 클래스 불균형을 해소하여 Recall 저하를 방지하였고, <b>모델이 분식 기업을 더 잘 탐지할 수 있도록
+												개선</b>하였습니다.</li>
 									</ul>
-
 								</div>
-							</div>
-						</div>
-					</div>
+							</details>
 
-					<div class="contents-wrapper">
-						<div class="wrapper5">
-							<b class="b">
-								<ol class="ol">
-									<li>모델 최적화 필요성</li>
-								</ol>
-							</b>
-							<div class="divider">
-								<div class="min-height"></div>
-								<div class="divider1"></div>
-							</div>
-							<div class="contents-wrapper">
-								<div class="div">
 
-									<div class="subheading">배경</div>
+							<details>
+								<summary><b>3.3. 모델 최적화 필요성</b></summary>
+								<div class="content">
+									<h4>배경</h4>
 									<ul class="ul">
-										<li>초기 모델 학습에서는 정확도는 높았지만, Recall이 낮아 <b>실제 분식 기업을 놓치는 비율</b>이 높았습니다.</li>
-										<li>금융 사기 탐지에서는 “적발하지 못하는 것”이 더 큰 문제이므로 Recall 개선이 필요했습니다.</li>
+										<li>초기 모델 학습에서는 정확도는 높았지만 Recall이 낮아, <b>실제 분식 기업을 놓치는 비율</b>이 높았습니다.</li>
+										<li>금융 사기 탐지에서는 “적발하지 못하는 것”이 더 큰 문제이므로, Recall 개선이 반드시 필요했습니다.</li>
 									</ul>
 
-									<div class="subheading">도전</div>
+									<h4>도전</h4>
 									<ul class="ul">
-										<li>ANN과 RF 모두 기본 하이퍼파라미터로는 Recall이 충분히 확보되지 않음</li>
-										<li>과적합 방지와 성능 향상을 동시에 달성해야 함</li>
+										<li>ANN과 RF 모두 기본 하이퍼파라미터로는 Recall을 충분히 확보하지 못하였습니다.</li>
+										<li>과적합을 방지하면서 동시에 성능을 향상시켜야 하는 과제가 있었습니다.</li>
 									</ul>
 
-									<div class="subheading">해결 방안</div>
+									<h4>해결 방안</h4>
 									<ul class="ul">
-										<li><b>Random Forest 튜닝</b>:
+										<li><b>Random Forest 튜닝</b>
 											<ul>
-												<li>GridSearchCV / RandomizedSearchCV로 트리 수(n_estimators), 최대
-													깊이(max_depth), 분할 기준(max_features) 조정</li>
+												<li>GridSearchCV와 RandomizedSearchCV를 활용하여 트리
+													수(<code>n_estimators</code>), 최대 깊이(<code>max_depth</code>), 분할
+													기준(<code>max_features</code>)을 조정하였습니다.</li>
 											</ul>
 										</li>
-										<li><b>ANN 튜닝</b>:
+										<li><b>ANN 튜닝</b>
 											<ul>
-												<li>은닉층 수, 뉴런 수, 학습률, 활성화 함수 변경</li>
-												<li>Dropout으로 과적합 방지</li>
+												<li>은닉층 수, 뉴런 수, 학습률, 활성화 함수를 변경하며 최적 구조를 탐색하였습니다.</li>
+												<li>Dropout 기법을 적용하여 과적합을 방지하였습니다.</li>
 											</ul>
 										</li>
-										<li><b>평가지표</b>: Accuracy뿐 아니라 Recall과 F1-score를 함께 모니터링</li>
+										<li><b>평가지표 관리</b>
+											<ul>
+												<li>Accuracy뿐만 아니라 Recall과 F1-score를 함께 모니터링하여 모델 개선 방향을 설정하였습니다.</li>
+											</ul>
+										</li>
 									</ul>
 
-									<div class="subheading">성과</div>
+									<h4>성과</h4>
 									<ul class="ul">
-										<li>Recall을 ANN 87%, RF 85%까지 끌어올림</li>
-										<li>ANN은 분식 탐지 성능(Recall)에서 우수, RF는 해석 용이성과 빠른 학습이 장점</li>
-										<li>피처 중요도 분석 결과 부채비율, 유동비율, 영업이익률이 핵심 지표로 도출</li>
+										<li>Recall을 ANN 87%, RF 85%까지 끌어올릴 수 있었습니다.</li>
+										<li>ANN은 분식 탐지 성능(Recall)에서 우수하였고, RF는 해석 용이성과 빠른 학습 속도가 장점으로 확인되었습니다.</li>
+										<li>피처 중요도 분석 결과, <b>부채비율·유동비율·영업이익률</b>이 핵심 지표로 도출되었습니다.</li>
 									</ul>
-
 								</div>
-							</div>
-						</div>
-
-					</div>
+							</details>
 
 
-					<div class="contents-wrapper">
-						<div class="wrapper5">
-							<b class="b">
-								<ol class="ol">
-									<li>실험 결과 및 분석</li>
-								</ol>
-							</b>
-							<div class="divider">
-								<div class="min-height"></div>
-								<div class="divider1"></div>
-							</div>
-							<div class="contents-wrapper">
-								<div class="div">
-
-									<div class="subheading">실험 결과 (성능 지표)</div>
+							<details>
+								<summary><b>3.4. 실험 결과 및 분석</b></summary>
+								<div class="content">
+									<h4>실험 결과 (성능 지표)</h4>
 									<table class="stack-table">
 										<thead>
 											<tr>
@@ -447,85 +410,83 @@
 										</tbody>
 									</table>
 
-									<div class="subheading">성능 비교</div>
+									<h4>성능 비교</h4>
 									<ul class="ul">
-										<li><b>NN(인공신경망)</b>: 정상/분식 모두 F1-score가 0.73로 균형 잡힌 성능, Accuracy 0.73</li>
-										<li><b>RF (GridSearch)</b>: NN보다 F1-score와 Accuracy가 다소 낮음(0.71)</li>
-										<li><b>RF (RandomSearch)</b>: GridSearch와 유사하나, 분식 클래스의 F1-score가 0.72로 약간 개선
-										</li>
-										<li><b>RF (RFECV)</b>: 변수 선택을 적용하니 분식 클래스 F1-score가 <b>0.81</b>로 크게 향상, Accuracy
-											0.77로 가장 높음</li>
-										<li><b>RF (SMOTE)</b>: 정상/분식 모두 F1-score가 0.77로 균형, Accuracy 0.77로 RFECV와 동일
-										</li>
+										<li><b>NN(인공신경망)</b>: 정상과 분식 모두 F1-score가 0.73으로 균형 잡힌 성능을 보였으며, Accuracy는
+											0.73이었습니다.</li>
+										<li><b>RF (GridSearch)</b>: NN보다 F1-score와 Accuracy가 다소 낮아 0.71 수준이었습니다.</li>
+										<li><b>RF (RandomSearch)</b>: GridSearch와 유사하였으나, 분식 클래스의 F1-score가 0.72로 약간
+											개선되었습니다.</li>
+										<li><b>RF (RFECV)</b>: 변수 선택을 적용하였을 때 분식 클래스의 F1-score가 <b>0.81</b>로 크게 향상되었고,
+											Accuracy는 0.77로 가장 높았습니다.</li>
+										<li><b>RF (SMOTE)</b>: 정상과 분식 모두 F1-score가 0.77로 균형을 이루었으며, Accuracy도 0.77로
+											RFECV와 동일한 성능을 보였습니다.</li>
 									</ul>
 
-									<div class="subheading">분석 결과</div>
+									<h4>분석 결과</h4>
 									<ul class="ul">
-										<li><b>Recall 및 Precision 균형</b>이 중요한 분식 탐지에서 RFECV와 SMOTE가 뚜렷한 효과를 보임</li>
-										<li>RFECV → 불필요한 변수를 제거하고 핵심 피처만 학습하여 분식 탐지 성능 향상</li>
-										<li>SMOTE → 데이터 불균형을 완화해 두 클래스 간 성능 균형 확보</li>
-										<li>NN은 분식/정상 성능이 비슷하지만, 절대 수치에서는 RF(RFECV/SMOTE)보다 낮음</li>
-										<li>RF는 해석 용이성과 속도에서 강점이 있지만, 전처리 없이 기본 튜닝만 하면 분식 탐지 성능이 떨어짐</li>
+										<li><b>Recall과 Precision의 균형</b>이 중요한 분식 탐지에서 RFECV와 SMOTE가 뚜렷한 효과를 보였습니다.</li>
+										<li>RFECV는 불필요한 변수를 제거하고 핵심 피처만 학습하게 하여 분식 탐지 성능을 크게 향상시켰습니다.</li>
+										<li>SMOTE는 데이터 불균형을 완화하여 두 클래스 간 성능 균형을 확보하였습니다.</li>
+										<li>NN은 분식과 정상 성능이 비슷하였지만, 절대 수치에서는 RF(RFECV/SMOTE)보다 낮은 결과를 보였습니다.</li>
+										<li>RF는 해석 용이성과 학습 속도에서 강점이 있었지만, 전처리 없이 기본 튜닝만으로는 분식 탐지 성능이 부족하였습니다.</li>
 									</ul>
 
-									<div class="subheading">결론</div>
+									<h4>결론</h4>
 									<ul class="ul">
 										<li><b>분식회계 탐지</b>에서는 단순한 하이퍼파라미터 튜닝보다 <b>변수 선택(RFECV)</b>과 <b>불균형
-												처리(SMOTE)</b>가 성능 개선에 결정적</li>
-										<li>NN은 기본 성능이 균형 잡혀 있으나, RF를 전처리와 함께 사용하면 더 높은 성능 가능</li>
+												처리(SMOTE)</b>가 성능 개선에 결정적인 역할을 하였습니다.</li>
+										<li>NN은 기본적으로 균형 잡힌 성능을 보였으나, RF에 적절한 전처리를 적용할 경우 더 높은 성능을 달성할 수 있었습니다.</li>
 										<li>최종적으로:
 											<ul>
-												<li>분식 탐지율 극대화 → <b>RFECV + RF</b></li>
-												<li>클래스 간 균형 유지 → <b>SMOTE + RF</b></li>
+												<li><b>분식 탐지율 극대화</b>가 필요할 경우 → <b>RFECV + RF</b></li>
+												<li><b>클래스 간 균형 유지</b>가 필요할 경우 → <b>SMOTE + RF</b></li>
 											</ul>
 										</li>
 									</ul>
-
 								</div>
-							</div>
+							</details>
+
+
 						</div>
-
 					</div>
-
-
 				</div>
 
-			</div>
-			<div class="btn-wrapper">
-				<div class="button" id="buttonContainer" data-href="../../index.html">
-					<img class="phosphor-icons-users" alt="" src="/assets/caret_left_icon.svg">
-					<div class="button1">돌아가기</div>
+				<div class="btn-wrapper">
+					<div class="button" id="buttonContainer" data-href="../../index.html">
+						<img class="phosphor-icons-users" alt="" src="/assets/caret_left_icon.svg">
+						<div class="button1">돌아가기</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="sticky">
-		<div class="text-wrapper">
-			<div class="div7">협업은 부드럽게, 기준은 단단하게.</div>
-			<b class="b8">신입 데이터 엔지니어 황동혁입니다.</b>
-		</div>
-		<div class="wrapper12">
-			<div class="button2" id="buttonContainer" data-href="../../index.html" role="link">
-				<img class="phosphor-icons-caretleft1" alt="" src="/assets/caret_left_icon.svg">
-
+		<div class="sticky">
+			<div class="text-wrapper">
+				<div class="div7">협업은 부드럽게, 기준은 단단하게.</div>
+				<b class="b8">신입 데이터 엔지니어 황동혁입니다.</b>
 			</div>
-			<b class="b9">프로젝트 상세보기</b>
-		</div>
-	</div>
+			<div class="wrapper12">
+				<div class="button2" id="buttonContainer" data-href="../../index.html" role="link">
+					<img class="phosphor-icons-caretleft1" alt="" src="/assets/caret_left_icon.svg">
 
-	<script>
-		document.querySelectorAll('[id="buttonContainer"]').forEach((btn) => {
-			const url = btn.dataset.href || './index.html';
-			const go = () => { window.location.href = url; };
-			btn.addEventListener('click', go);
-			btn.addEventListener('keydown', (e) => {
-				if (e.key === 'Enter' || e.key === ' ') {
-					e.preventDefault();
-					go();
-				}
+				</div>
+				<b class="b9">프로젝트 상세보기</b>
+			</div>
+		</div>
+
+		<script>
+			document.querySelectorAll('[id="buttonContainer"]').forEach((btn) => {
+				const url = btn.dataset.href || './index.html';
+				const go = () => { window.location.href = url; };
+				btn.addEventListener('click', go);
+				btn.addEventListener('keydown', (e) => {
+					if (e.key === 'Enter' || e.key === ' ') {
+						e.preventDefault();
+						go();
+					}
+				});
 			});
-		});
-	</script>
+		</script>
 </body>
 
 </html>
