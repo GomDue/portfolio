@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;700;900&display=swap" />
+    <title>돈와줘 — 프로젝트 상세</title>
+    <style>
+        /* 헬퍼만 추가 (디자인 영향 최소화) */
+        .stack-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .stack-table th,
+        .stack-table td {
+            border: 1px solid #e5e7eb;
+            padding: 8px 10px;
+            text-align: left;
+        }
+
+        .stack-table thead th {
+            background: #f8fafc;
+        }
+
+        .subheading {
+            font-weight: 700;
+            margin: 8px 0;
+        }
+
+        .mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+        }
+
+        .content-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 8px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="project-detail-view">
+        <div class="container">
+            <!-- 헤더 카드 -->
+            <div class="project-card">
+                <div class="wrapper">
+                    <div class="favicon">
+                        <div class="favicon-child favicon-helpmoney"></div>
+                    </div>
+                    <div class="wrapper1">
+                        <b class="b">돈와줘</b>
+                        <div class="calendar-wrapper">
+                            <img class="icon-frame" alt="" src="/assets/calender_icon.svg">
+                            <div class="xxxxx-202xxxxx">2025.09.01 ~ now</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper2">
+                    <div class="tag">
+                        <img class="phosphor-icons-users" alt="" src="/assets/user_blue_icon.svg">
+                        <div class="tag1">참여 인원 | 6명</div>
+                    </div>
+                    <div class="tag2">
+                        <img class="phosphor-icons-users" alt="" src="/assets/lightning_blue_icon.svg">
+                        <div class="tag1">대표 성과 | 실시간 주가·뉴스 파이프라인 및 브로드캐스트 구축</div>
+                    </div>
+                </div>
+                <div class="link-wrapper">
+                    <div class="wrapper3" id="buttonContainer"
+                        data-href="https://band-cheddar-f06.notion.site/22aefa246e29804ea730f6f523c3050d?source=copy_link"
+                        role="link" tabindex="0" aria-label="Notion 문서 열기">
+                        <img class="mdinotion-icon" alt="" src="/assets/notion_blue_icon.svg">
+                        <div class="github">Notion</div>
+                        <img class="feather-icons-arrow-up-right" alt="" src="/assets/arrow_up_right_blue_icon.svg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 본문 -->
+            <div class="body-contents-wrapper">
+
+                <!-- 1. 프로젝트 개요 -->
+                <div class="wrapper5">
+                    <b class="b">
+                        <ol class="ol">
+                            <li>프로젝트 개요</li>
+                        </ol>
+                    </b>
+                    <div class="divider">
+                        <div class="min-height"></div>
+                        <div class="divider1"></div>
+                    </div>
+                    <div class="contents-wrapper">
+                        <div class="div">
+
+                            <div class="subheading">기획 배경</div>
+                            <ul class="ul">
+                                <li>최근 주식 투자자가 급격히 증가하였지만 초보 투자자 입장에서는 진입 장벽이 높아 쉽게 포기하는 경우가 많습니다.</li>
+                                <li>기존 서비스는 <b>사후 리포트 부족</b>, <b>지표 해석의 어려움</b>, <b>어려운 용어</b> 등의 한계로 인해 초보자가 활용하기 어렵다는
+                                    문제가 있습니다.</li>
+                            </ul>
+                            <br>
+
+                            <div class="subheading">프로젝트 목표</div>
+                            <ul class="ul">
+                                <li>투자 결과뿐만 아니라 <b>원인 분석과 맥락 제공</b>을 통해 초보 투자자의 이해를 돕습니다.</li>
+                                <li>지표와 용어를 쉽게 풀어 설명하여 <b>스스로 판단할 수 있는 능력</b>을 강화합니다.</li>
+                                <li>실시간 데이터와 AI를 활용한 <b>투자 코칭 및 학습 지원 서비스</b>를 제공합니다.</li>
+                            </ul>
+                            <br>
+
+                            <div class="subheading">팀 구성</div>
+                            <ul class="ul">
+                                <li>6인 (FE 2명 · BE 1명 · <b>BE/DE 1명[본인]</b>)</li>
+                            </ul>
+                            <br>
+
+                            <div class="subheading">주요 기능</div>
+                            <ul class="ul">
+                                <li><b>실시간 모의 투자:</b> 실시간 데이터 기반의 가상 매매 기능을 제공하여 투자 감각을 형성할 수 있도록 합니다.</li>
+                                <li><b>AI 챗봇:</b> 어려운 용어와 지표를 쉽게 설명하고 실시간 질의응답을 제공합니다.</li>
+                                <li><b>기업 인사이트 분석:</b> 과거 차트, 뉴스, 공시 데이터를 종합 분석하여 주가 변동의 배경을 제공합니다.</li>
+                                <li><b>투자 코칭 서비스:</b> 사용자의 보유 종목과 매매 패턴을 분석하여 습관과 성향을 진단합니다.</li>
+                            </ul>
+                            <br>
+
+
+                            <div class="subheading">아키텍처</div>
+                            <figure class="img-card">
+                                <img class="image lightboxable" src="/assets/help_money/architecture_helpmoney.png"
+                                    alt="돈와줘 서비스 아키텍처 다이어그램" loading="lazy">
+                                <figcaption class="sr-only">
+                                    WhereShouldWeGo 서비스 아키텍처 다이어그램
+                                </figcaption>
+                            </figure>
+                            <br>
+
+                            <div class="subheading">기술 스택</div>
+                            <table class="stack-table">
+                                <thead>
+                                    <tr>
+                                        <th>분야</th>
+                                        <th>기술 스택</th>
+                                        <th>설명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Data Ingestion</td>
+                                        <td><span class="badge strong">Python</span> <span class="badge">(WebSocket,
+                                                feedparser)</span></td>
+                                        <td>한국투자증권(KIS) WebSocket 시세·호가 데이터 및 RSS 뉴스 데이터 수집</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Messaging</td>
+                                        <td><span class="badge strong">Apache Kafka</span></td>
+                                        <td>시세·호가·뉴스 데이터를 토픽 단위로 발행 및 구독, 파티션 단위 순서 보장</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Back-End</td>
+                                        <td><span class="badge strong">Spring Boot</span></td>
+                                        <td>Kafka Consumer, 데이터 가공 및 API 제공, WebSocket(STOMP) 기반 실시간 브로드캐스트</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cache</td>
+                                        <td><span class="badge strong">Redis</span></td>
+                                        <td>실시간 랭킹 캐시 및 고속 조회 지원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Database (문서형)</td>
+                                        <td><span class="badge strong">MongoDB</span></td>
+                                        <td>뉴스 원문 및 메타데이터 영속화, 중복 방지 unique index 적용</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Database (관계형)</td>
+                                        <td><span class="badge strong">AWS RDS</span> <span
+                                                class="badge">(MySQL/PostgreSQL)</span></td>
+                                        <td>사용자, 주문, 계정 등 운영 데이터 저장</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Front-End</td>
+                                        <td><span class="badge">React</span> <span class="badge">Vite</span>
+                                            <span class="badge">Tailwind</span>
+                                        </td>
+                                        <td>직관적인 UI/UX 구현 및 시각화</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Infra</td>
+                                        <td><span class="badge">Nginx</span> <span class="badge strong">Docker</span>
+                                            <span class="badge strong">AWS
+                                                EC2</span>
+                                        </td>
+                                        <td>FE/BE 리버스 프록시, TLS 처리, 컨테이너 기반 오케스트레이션 및 클라우드 운영</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+
+
+
+                            <div class="subheading">시연</div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. 역할 및 기여도 -->
+                <div class="wrapper5">
+                    <b class="b">
+                        <ol class="ol" start="2">
+                            <li>역할 및 기여도</li>
+                        </ol>
+                    </b>
+                    <div class="divider">
+                        <div class="min-height"></div>
+                        <div class="divider1"></div>
+                    </div>
+                    <div class="contents-wrapper">
+                        <div class="div">
+                            <ul class="ul">
+                                <li><b>데이터 파이프라인 설계/구현</b>: KIS WebSocket과 RSS 크롤러를 개발하여 데이터를 Kafka로 발행했습니다.</li>
+                                <li><b>실시간 처리 서버 개발</b>: Spring Boot Consumer로 Kafka 메시지를 구독하고 STOMP WebSocket 브로드캐스트를
+                                    구현했습니다.</li>
+                                <li><b>데이터베이스 연동</b>: 뉴스는 <b>MongoDB</b>에, 사용자·주문 데이터는 <b>PostgreSQL</b>에 저장하는 구조를
+                                    설계했습니다.</li>
+                                <li><b>인프라/배포 환경 구축</b>: <b>Nginx 리버스 프록시</b>와 <b>Docker Compose</b> 기반 컨테이너 환경을 AWS
+                                    EC2에서 운영했습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. 개발 상세 내용 -->
+                <div class="wrapper5">
+                    <b class="b">
+                        <ol class="ol" start="3">
+                            <li>개발 상세</li>
+                        </ol>
+                    </b>
+                    <div class="divider">
+                        <div class="min-height"></div>
+                        <div class="divider1"></div>
+                    </div>
+                    <div class="contents-wrapper">
+                        <div class="div">
+                            <details>
+                                <summary><b>3.1. 실시간 데이터 수집 및 메시징 파이프라인</b></summary>
+                                <div class="content">
+                                    <h4>배경</h4>
+                                    <ul class="ul">
+                                        <li>서비스는 <b>실시간 주식 시세·호가 데이터</b>와 <b>뉴스 데이터</b>를 모아 사용자에게 투자 인사이트와 코칭 기능을 제공합니다.
+                                        </li>
+                                        <li>이를 위해 데이터를 <b>안정적으로 수집</b>하고 <b>빠르게 전달</b>하는 구조가 필요했습니다.</li>
+                                    </ul>
+
+                                    <h4>도전</h4>
+                                    <ul class="ul">
+                                        <li>KIS WebSocket API는 <b>세션당 종목 수 제한</b>이 있어 여러 종목을 동시에 받아오기 어려웠습니다.</li>
+                                        <li>연결이 끊기거나 응답이 늦어지면 전체 흐름에 <b>병목</b>이 생길 수 있었습니다.</li>
+                                        <li>뉴스는 RSS로 받아오는데, <b>중복 기사</b>가 많고 본문을 가져오지 못하는 경우도 있었습니다.</li>
+                                    </ul>
+
+                                    <h4>해결 방안</h4>
+                                    <figure class="img-card">
+                                        <img class="image lightboxable"
+                                            src="/assets/help_money/data_diagram_heplmoney.png"
+                                            alt="WhereShouldWeGo 서비스 아키텍처 다이어그램" loading="lazy">
+                                        <figcaption class="sr-only">
+                                            WhereShouldWeGo 서비스 아키텍처 다이어그램
+                                        </figcaption>
+                                    </figure>
+                                    <ul class="ul">
+                                        <li><b>KISWebSocket</b> 클래스를 구현하여 세션을 나누고, <b>자동 재연결</b> 기능을 넣어 안정적으로 데이터를
+                                            수집했습니다.</li>
+                                        <li><b>KIS2KafkaProducer</b>를 프로젝트 전체에서 하나만 사용하도록 설계해, 받은 데이터를 <b>Kafka</b>로 모아
+                                            전달했습니다.</li>
+                                        <li><b>RSSIngestService</b>에서 RSS를 읽은 뒤 본문을 크롤링해 <b>MongoDB에는 원문</b>을,
+                                            <b>PostgreSQL에는 요약 정보와 벡터</b>를 저장했습니다.
+                                        </li>
+                                        <li>본문이 없거나 텍스트가 전혀 없는 기사는 <b>자동으로 건너뛰도록</b> 처리했습니다.</li>
+                                    </ul>
+
+                                    <h4>성과</h4>
+                                    <ul class="ul">
+                                        <li>주식 데이터는 <b>평균 2~3ms, 최대 10ms</b> 안에 안정적으로 Kafka로 전달되었습니다.</li>
+                                        <li>MongoDB와 PostgreSQL을 함께 사용해 <b>중복 없는 뉴스 관리</b>와 <b>검색·추천에 활용 가능한 데이터</b>를
+                                            동시에 확보했습니다.</li>
+                                        <li>전체 과정이 자동으로 이어져 <b>사람 개입 없이 안정적으로 동작</b>했습니다.</li>
+                                    </ul>
+                                </div>
+                            </details>
+
+
+
+                            <details>
+                                <summary><b>3.2. WebSocket 기반 실시간 시세 브로드캐스트</b></summary>
+                                <div class="content">
+                                    <h4>배경</h4>
+                                    <ul class="ul">
+                                        <li>서비스의 핵심은 <b>실시간 주식 데이터 전송(브로드캐스트)</b>과 <b>빠른 응답성</b>입니다.</li>
+                                        <li>사용자가 보는 화면에 데이터가 <b>즉시 반영</b>되어야 하고, 동시에 <b>DB 저장</b>과 <b>캐싱</b>도 함께 이루어져야
+                                            했습니다.</li>
+                                    </ul>
+
+                                    <h4>도전</h4>
+                                    <ul class="ul">
+                                        <li>Kafka에서 받은 한 건의 메시지를 가지고 <b>화면 전송, DB 저장, 캐시 업데이트</b>까지 모두 처리해야 했습니다.</li>
+                                        <li>여러 처리가 한 곳에서 동시에 이뤄지다 보니 <b>속도 저하</b>나 <b>처리 지연</b>이 생길 수 있었습니다.</li>
+                                        <li>특히 화면 전송은 몇 ms라도 지연되면 사용자가 바로 느낄 수 있어 <b>빠른 반응</b>이 필수였습니다.</li>
+                                    </ul>
+
+                                    <h4>해결 방안</h4>
+                                    <figure class="img-card">
+                                        <img class="image lightboxable"
+                                            src="/assets/help_money/sequence_diagram_kafka_broadcast.png"
+                                            alt="WhereShouldWeGo 서비스 아키텍처 다이어그램" loading="lazy">
+                                        <figcaption class="sr-only">
+                                            WhereShouldWeGo 서비스 아키텍처 다이어그램
+                                        </figcaption>
+                                    </figure>
+                                    <ul class="ul">
+                                        <li><b>Spring Boot 기반 MarketStreamService 구현</b>
+                                            <ul>
+                                                <li><code>@KafkaListener</code>를 이용해 <b>체결 데이터(tick)</b>와 <b>호가
+                                                        데이터(ask)</b>를 분리 처리했습니다.</li>
+                                                <li>받은 데이터는 <code>KISParser</code>로 해석한 뒤, <b>STOMP WebSocket</b>을 통해
+                                                    <code>/topic/stock/{code}</code> 채널로 전송했습니다.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <h4>성과</h4>
+                                    <ul class="ul">
+                                        <li>사용자의 화면에 데이터가 <b>거의 지연 없이 즉시 반영</b>되는 실시간 전송 구조를 완성했습니다.</li>
+                                        <li>Kafka 처리 시간을 로그로 기록해 모니터링할 수 있어, <b>시스템 안정성과 성능 추적</b>이 가능해졌습니다.</li>
+                                    </ul>
+                                </div>
+                            </details>
+
+
+
+                            <details>
+                                <summary><b>3.3. 당일 주가 시세 저장</b></summary>
+                                <div class="content">
+                                    <h4>배경</h4>
+                                    <ul class="ul">
+                                        <li>사용자에게 <b>당일의 분봉 데이터</b>를 실시간으로 보여줄 수 있어야 했습니다.</li>
+                                        <li>단순히 WebSocket 스트리밍만으로는 과거 데이터를 복원하기 어려워, 별도의 저장 및 보완 방식이 필요했습니다.</li>
+                                    </ul>
+
+                                    <h4>도전</h4>
+                                    <ul class="ul">
+                                        <li>사용자는 체감 지연이 민감하기 때문에 <b>최대한 빠르게 데이터 전달</b>이 필요했습니다.</li>
+                                        <li>동시에 다른 주식 서비스(KIS 차트 등)와 비교해도 <b>정확한 분봉 데이터</b>를 보장해야 했습니다.</li>
+                                    </ul>
+
+                                    <h4>해결 방안</h4>
+                                    <ul class="ul">
+                                        <li><b>Kafka 되감기(Offset rewind)</b>
+                                            <ul>
+                                                <li>Kafka에서 컨슈머 오프셋을 조정해 과거 데이터를 재전송하는 방법을 검토했습니다.</li>
+                                                <li>지연은 적지만, Kafka는 장기 저장에 적합하지 않고 분봉 집계에 한계가 있었습니다.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Python 집계 후 DB 저장</b>
+                                            <ul>
+                                                <li>WebSocket에서 받은 tick 데이터를 Python에서 직접 1분 단위로 집계해 DB에 저장하는 방법을
+                                                    검토했습니다.</li>
+                                                <li>지연은 적지만, 자체 구현에 의존하여 정확도 문제와 보정 어려움이 있었습니다.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>KIS REST API 주기적 호출</b>
+                                            <ul>
+                                                <li>KIS에서 제공하는 분봉 조회 REST API를 1분 주기로 호출해 Postgres에 저장하는 방식을 적용했습니다.
+                                                </li>
+                                                <li><b>정확도가 보장</b>되고, Airflow를 통해 장마감 시점에 전체 데이터를 교정할 수도 있었습니다.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <h4>성과</h4>
+                                    <ul class="ul">
+                                        <li>최종적으로 REST API 기반 방식을 선택하여, 다른 서비스와 비교해도 <b>일관된 분봉 데이터</b>를 제공할 수 있었습니다.
+                                        </li>
+                                        <li>하루치 분봉만 관리하면 되기 때문에 DB 용량과 API 호출량 모두 안정적으로 운영할 수 있었습니다.</li>
+                                        <li>장마감 시점에는 Airflow를 활용한 교정 파이프라인을 적용해, <b>누락·불일치 없는 데이터 품질</b>을 확보했습니다.</li>
+                                    </ul>
+                                </div>
+                                </detail>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="wrapper5">
+                    <b class="b">
+                        <ol class="ol" start="4">
+                            <li>회고</li>
+                        </ol>
+                    </b>
+                    <div class="divider">
+                        <div class="min-height"></div>
+                        <div class="divider1"></div>
+                    </div>
+                    <div class="contents-wrapper">
+                        <div class="div">
+                            <ul class="ul">
+                                <li><b>아직 진행 중인 프로젝트</b>: 현재도 개발이 진행되고 있으며, 실시간 기능 고도화와 보안 강화 같은 과제가 남아 있습니다. 완성된 성과보다는 과정 속에서의 배움이 많았습니다.</li>
+                                <li><b>실시간 파이프라인 구축 경험</b>: KIS WebSocket, Kafka, Spring Boot를 연결하며 평균 2~3ms 지연으로 안정적인
+                                    데이터 흐름을 만들었습니다. 단순히 구현이 아니라, 성능 수치를 측정하고 개선하는 과정을 통해 실시간 시스템의 감각을 익혔습니다.</li>
+                                <li><b>보안 요소의 필요성 체감</b>: STOMP WebSocket은 기본 기능만 구현한 상태라, 연결 단계에서 토큰 검증이 미흡했습니다. 이후 JWT
+                                    인증·인가를 강화하고 세션 제어를 도입해야 함을 깨달았습니다.</li>
+                                <li><b>데이터 품질 관리의 중요성</b>: 뉴스 크롤링 과정에서 본문 누락이나 중복 문제가 발생했습니다. 이를 통해 데이터 수집 단계부터 품질 검증과
+                                    보정 로직을 넣는 것이 필수적임을 알게 되었습니다.</li>
+                                <li><b>운영 환경 개선 필요</b>: 현재는 Docker Compose 기반으로만 운영 중이라, 장애 감지와 알림이 부족합니다.
+                                    Prometheus·Grafana 같은 모니터링 체계가 필요하다는 점을 배웠습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- 하단 버튼 -->
+                <div class="btn-wrapper">
+                    <div class="button" id="buttonContainer" data-href="../../index.html" role="link" tabindex="0"
+                        aria-label="목록으로 돌아가기">
+                        <img class="phosphor-icons-users" alt="" src="/assets/caret_left_icon.svg">
+                        <div class="button1">돌아가기</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky">
+            <div class="text-wrapper">
+                <div class="div7">협업은 부드럽게, 기준은 단단하게.</div>
+                <b class="b8">신입 데이터 엔지니어 황동혁입니다.</b>
+            </div>
+            <div class="wrapper12">
+                <div class="button2" id="buttonContainer" data-href="../../index.html" role="link">
+                    <img class="phosphor-icons-caretleft1" alt="" src="/assets/caret_left_icon.svg">
+
+                </div>
+                <b class="b9">프로젝트 상세보기</b>
+            </div>
+        </div>
+
+        <script>
+            document.querySelectorAll('[id="buttonContainer"]').forEach((btn) => {
+                const url = btn.dataset.href || './index.html';
+                const go = () => { window.location.href = url; };
+                btn.addEventListener('click', go);
+                btn.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        go();
+                    }
+                });
+            });
+
+            (function () {
+                // 오버레이 DOM 생성
+                const overlay = document.createElement('div');
+                overlay.className = 'lightbox-overlay';
+                overlay.innerHTML = `
+    <div class="lightbox-content" tabindex="-1" role="dialog" aria-modal="true">
+      <button class="lightbox-close" aria-label="닫기">✕</button>
+    </div>
+  `;
+                document.body.appendChild(overlay);
+
+                const content = overlay.querySelector('.lightbox-content');
+                const closeBtn = overlay.querySelector('.lightbox-close');
+
+                function getVideoSrc(el) {
+                    const s = el.querySelector('source');
+                    return (s && s.src) || el.currentSrc || el.src;
+                }
+
+                function openLightbox(el) {
+                    // 기존 미디어 제거
+                    content.querySelectorAll('img,video').forEach(n => n.remove());
+
+                    let node;
+                    if (el.tagName.toLowerCase() === 'img') {
+                        node = document.createElement('img');
+                        node.src = el.src;
+                        node.alt = el.alt || '';
+                    } else {
+                        node = document.createElement('video');
+                        node.src = getVideoSrc(el);
+                        node.autoplay = true;
+                        node.loop = true;
+                        node.muted = true;
+                        node.playsInline = true;
+                        node.controls = true;
+                    }
+
+                    content.appendChild(node);
+                    overlay.style.display = 'flex';
+                    document.body.classList.add('lb-open');
+                    content.focus();
+                }
+
+                function closeLightbox() {
+                    overlay.style.display = 'none';
+                    document.body.classList.remove('lb-open');
+                    content.classList.remove('cover'); // cover 모드 해제
+                    const v = content.querySelector('video');
+                    if (v) { try { v.pause(); } catch (e) { } }
+                }
+
+                // 위임 클릭으로 열기
+                document.addEventListener('click', (e) => {
+                    const t = e.target.closest('.lightboxable');
+                    if (t) {
+                        e.preventDefault();
+                        openLightbox(t);
+                    }
+                });
+
+                // 배경 클릭으로 닫기
+                overlay.addEventListener('click', (e) => {
+                    if (e.target === overlay) closeLightbox();
+                });
+
+                closeBtn.addEventListener('click', closeLightbox);
+
+                // ESC 닫기
+                document.addEventListener('keydown', (e) => {
+                    if (overlay.style.display === 'flex' && e.key === 'Escape') closeLightbox();
+                });
+
+                // Z 키 or 미디어 클릭으로 contain ↔ cover 전환
+                function toggleFitMode() {
+                    content.classList.toggle('cover');
+                }
+
+                content.addEventListener('click', (e) => {
+                    const media = e.target.closest('img,video');
+                    if (media) toggleFitMode();
+                });
+
+                document.addEventListener('keydown', (e) => {
+                    if (overlay.style.display === 'flex' && (e.key === 'z' || e.key === 'Z')) {
+                        toggleFitMode();
+                    }
+                });
+            })();
+        </script>
+
+</body>
+
+</html>

@@ -15,6 +15,8 @@
 .favicon-whereshouldwego { background-image: url('/assets/whereshouldwego/whereshouldwego.png'); }
 .favicon-klyde { background-image: url('/assets/klyde/klyde.png'); }
 .favicon-ssabab { background-image: url('/assets/ssabab/ssabab.png'); }
+.favicon-helpmoney { background-image: url('/assets/help_money/help_money.png'); }
+.favicon-paper { background-image: url('/assets/paper/paper.png'); }
 
 .favicon {
   	width: 64px;
@@ -614,7 +616,12 @@ body.lb-open { overflow: hidden; }
   font-weight: 600;
 }
 
-
+figcaption {
+  text-align: center;
+  margin-top: 8px; /* 위쪽 간격 */
+  font-size: 14px;
+  color: #6b7280; /* 회색 톤 */
+}
 
 
 /* 토글(아코디언) 스타일 */

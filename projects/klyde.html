@@ -103,6 +103,7 @@
 								<li>특히 <b>영문 기사 이해 난이도</b>가 높아 소비 장벽이 존재했습니다.</li>
 								<li>KLYDE는 이 문제를 <b>추천·요약·번역</b>으로 풀어 사용자가 <b>쉽게 찾고 빠르게 이해</b>하도록 돕고자 했습니다.</li>
 							</ul>
+							<br>
 
 							<div class="subheading">프로젝트 목표</div>
 							<ul class="ul">
@@ -110,11 +111,13 @@
 								<li>“Clarity + Glide” 철학처럼, <b>핵심 정보를 명료하게 정리</b>하고 <b>매끄럽게 전달</b>하는 경험을 제공합니다.</li>
 								<li><b>전면 영어 기반</b> 소스(RSS: BBC, NYT, ZDNet Korea, Nippon 등)를 수집해 글로벌 뉴스를 다룹니다.</li>
 							</ul>
+							<br>
 
 							<div class="subheading">팀 구성</div>
 							<ul class="ul">
-								<li>2인 (Full Stack 1 · BE/Data Pipeline 1[본인])</li>
+								<li>2인 (Full Stack 1 · <b>BE/DE 1[본인]</b>)</li>
 							</ul>
+							<br>
 
 							<div class="subheading">주요 기능</div>
 							<ul class="ul">
@@ -124,6 +127,17 @@
 								<li><b>Elasticsearch 동기화 DAG:</b> PostgreSQL 변경사항을 10분마다 Elasticsearch에 반영</li>
 								<li><b>일일 뉴스 분석 리포트:</b> Spark 분석 결과를 PDF로 정리해 이메일 자동 발송 (Airflow + Gmail API)</li>
 							</ul>
+							<br>
+
+							<div class="subheading">아키텍처</div>
+							<figure class="img-card">
+								<img class="image lightboxable" src="/assets/klyde/architecture_KLYDE.png"
+									alt="KLYDE 서비스 아키텍처 다이어그램" loading="lazy">
+								<figcaption class="sr-only">
+									KLYDE 서비스 아키텍처 다이어그램
+								</figcaption>
+							</figure>
+							<br>
 
 							<div class="subheading">기술 스택</div>
 							<table class="stack-table">
@@ -137,46 +151,50 @@
 								<tbody>
 									<tr>
 										<td>데이터 수집</td>
-										<td>RSS, BeautifulSoup</td>
+										<td><span class="badge strong">RSS</span> <span
+												class="badge strong">BeautifulSoup</span></td>
 										<td>뉴스 본문·메타데이터 수집</td>
 									</tr>
 									<tr>
 										<td>실시간 처리</td>
-										<td>Kafka (Producer/Consumer)</td>
+										<td><span class="badge strong">Kafka</span></td>
 										<td>스트리밍 파이프라인 구성</td>
 									</tr>
 									<tr>
 										<td>저장소</td>
-										<td>PostgreSQL, Elasticsearch</td>
+										<td><span class="badge strong">PostgreSQL</span> <span
+												class="badge">Elasticsearch</span></td>
 										<td>운영 DB, 검색 인덱스(전문검색)</td>
 									</tr>
 									<tr>
 										<td>AI 분석</td>
-										<td>OpenAI GPT-4o-mini</td>
+										<td><span class="badge strong">OpenAI GPT-4o-mini</span></td>
 										<td>분류·키워드·요약/번역·임베딩</td>
 									</tr>
 									<tr>
 										<td>배치 분석</td>
-										<td>Apache Spark, Matplotlib</td>
+										<td><span class="badge strong">Apache Spark</span> <span
+												class="badge strong">Matplotlib</span></td>
 										<td>전일 집계·시각화(PDF 리포트)</td>
 									</tr>
 									<tr>
 										<td>워크플로우</td>
-										<td>Apache Airflow</td>
+										<td><span class="badge strong">Apache Airflow</span></td>
 										<td>일일 리포트·ES 동기화 DAG, Gmail API 발송</td>
 									</tr>
 									<tr>
 										<td>웹</td>
-										<td>Django, Vue.js</td>
+										<td><span class="badge">Django</span> <span class="badge">Vue.js</span></td>
 										<td>관리/대시보드 개발</td>
 									</tr>
 									<tr>
 										<td>인프라</td>
-										<td>Docker Compose</td>
+										<td><span class="badge strong">Docker Compose</span></td>
 										<td>통합 컨테이너 운영</td>
 									</tr>
 								</tbody>
 							</table>
+							<br>
 
 							<div class="subheading">시연</div>
 							<div class="demo-grid">
@@ -273,6 +291,13 @@
 
 									<h4>해결 방안</h4>
 									<ul class="ul">
+										<figure class="img-card">
+											<img class="image lightboxable" src="/assets/klyde/data_diagram_klyde.png"
+												alt="WhereShouldWeGo 서비스 아키텍처 다이어그램" loading="lazy">
+											<figcaption class="sr-only">
+												실시간 파이프라인 데이터 흐름
+											</figcaption>
+										</figure>
 										<li><b>실시간 파이프라인 (Kafka 기반)</b>
 											<ul>
 												<li><b>Kafka 단일 토픽</b>으로 파이프라인을 구성하여 운영 단순성을 확보하였습니다.</li>
@@ -282,7 +307,8 @@
 													<b>PostgreSQL</b>에 저장하였습니다. 저장 성공 시 <b>Elasticsearch</b>에 색인하고, 실패
 													건은 로그로 추적하도록 하였습니다.
 												</li>
-												<li><b>LLM 후처리 모듈</b>(키워드 추출·분류·임베딩)은 함수 단위로 분리해 필요 시 토글 가능하게 설계하였습니다.
+												<li><b>LLM 후처리 모듈</b>(키워드 추출·분류·임베딩)은 함수 단위로 분리했습니다. (현재는 비용 문제로 인해 비활성화
+													했습니다.)
 												</li>
 											</ul>
 										</li>
@@ -311,13 +337,10 @@
 
 									<h4>성과</h4>
 									<ul class="ul">
-										<li>기사 수집 직후 <b>전처리 → DB 저장 → ES 색인</b>까지 평균 <b>3초 이내</b>로 처리하여 실시간성을 확보하였습니다.
+										<li>기사 수집 직후 <b>전처리 → DB 저장 → ES 색인</b>까지 평균 <b>3초 이내</b>로 처리하여 실시간성을 확보했습니다.
 										</li>
-										<li>메시지 키/업서트 처리 및 주기적 보정으로 <b>중복·불일치 발생률을 90% 이상 감소</b>시켰습니다.</li>
-										<li>매일 아침 자동으로 제공되는 리포트 덕분에 운영팀이 전날 기사 흐름을 한눈에 파악할 수 있었으며, 수동 분석 시간이 <b>50% 이상
-												절감</b>되었습니다.</li>
-										<li><b>Spark + Airflow</b> 조합으로 대용량 집계와 스케줄링을 안정적으로 처리하였고, PostgreSQL ↔
-											Elasticsearch 간 불일치를 10분 내에 보정할 수 있었습니다.</li>
+										<li><b>Spark + Airflow</b> 조합으로 대용량 집계와 스케줄링을 안정적으로 처리했습니다.</li>
+										<li>매일 생성되는 PDF 리포트를 자동 발송하여, 운영팀의 수작업 리포트 작성 시간을 <b>100% 절감</b>했습니다.</li>
 									</ul>
 								</div>
 							</details>
@@ -358,9 +381,10 @@
 
 									<h4>성과</h4>
 									<ul class="ul">
-										<li>정합성과 검색 성능을 동시에 확보할 수 있었습니다.</li>
-										<li>실시간 업서트와 주기적 동기화를 통해 <b>DB ↔ ES 간 불일치를 최소화</b>하였으며, 검색·추천 응답 속도를 <b>약 35%
-												개선</b>하였습니다.</li>
+										<li><b>정확한 집계와 빠른 검색</b>이라는 두 가지 요구를 동시에 충족했습니다.</li>
+										<li>PostgreSQL은 집계 성능을 보장하고, Elasticsearch는 검색 응답 속도를 <b>수백 ms 수준</b>으로 낮췄습니다.
+										</li>
+										<li>DB ↔ ES 동기화 절차를 통해 운영 중 발생하는 정합성 문제를 크게 줄였습니다.</li>
 									</ul>
 								</div>
 							</details>
@@ -384,6 +408,18 @@
 									</ul>
 
 									<h4>해결 방안</h4>
+									<figure class="img-card">
+										<img class="image lightboxable" src="/assets/klyde/daily_report_1.jpg"
+											alt="WhereShouldWeGo sequence_diagram_stomp" loading="lazy">
+									</figure>
+									<figure class="img-card">
+										<img class="image lightboxable" src="/assets/klyde/daily_report_2.jpg"
+											alt="WhereShouldWeGo sequence_diagram_stomp" loading="lazy">
+									</figure>
+									<figure class="img-card">
+										<img class="image lightboxable" src="/assets/klyde/daily_report_3.jpg"
+											alt="WhereShouldWeGo sequence_diagram_stomp" loading="lazy">
+									</figure>
 									<ul class="ul">
 										<li><b>KPI 패널</b>: 일간 기사 수, 전일 대비(DoD), 카테고리 다양성, 최상위 키워드로 핵심 지표 제공.</li>
 										<li><b>최근 14일 추이(Line)</b>: 일별 기사량 변화를 선그래프로 표시.</li>
@@ -395,10 +431,9 @@
 
 									<h4>성과</h4>
 									<ul class="ul">
-										<li>매일 아침 자동 생성·배포로 전날 뉴스를 빠르게 파악.</li>
-										<li>KPI, 추이, 분포, 키워드, 카테고리, 워드클라우드 등 <b>6개 시각화</b>를 한눈에 제공.</li>
-										<li>생성부터 발송까지 <b>약 5분 이내</b> 완료.</li>
-										<li>운영팀 수동 분석 시간 <b>50% 이상 절감</b>, 회의 준비 효율 개선.</li>
+										<li>매일 아침 자동 생성·배포로 전날 뉴스를 빠르게 파악할 수 있습니다.</li>
+										<li>KPI, 추이, 분포, 키워드, 카테고리, 워드클라우드 등 <b>6개 시각화</b>를 한눈에 제공합니다.</li>
+										<li>생성부터 발송까지 <b>약 5분 이내</b> 완료됩니다.</li>
 									</ul>
 								</div>
 							</details>
@@ -410,8 +445,9 @@
 									<ul class="ul">
 										<li>초기 명세서에서는 Kafka로 수집한 데이터를 <b>PyFlink</b>가 처리한 뒤, 결과를
 											<b>PostgreSQL·Elasticsearch·Hadoop(HDFS)</b>에 저장하고 Spark + Matplotlib으로 리포트를
-											생성하는 구조였습니다.</li>
-										<li>하지만 실제 운영 환경에서는 Flink와 Hadoop은 학습 곡선이 높고 리소스 요구량도 커, 팀원 전체가 안정적으로 유지·확장하기
+											생성하는 구조였습니다.
+										</li>
+										<li>하지만 실제 운영 환경에서는 Flink와 Hadoop은 학습 곡선이 높고 리소스 요구량도 커, 안정적으로 유지·확장하기
 											어려웠습니다.</li>
 										<li>따라서 프로젝트의 <b>운영 단순화와 유지보수성</b>을 위해 불필요하게 복잡한 구성 요소를 제거하는 리팩토링이 필요했습니다.</li>
 									</ul>
@@ -460,10 +496,9 @@
 										<li>Docker Compose 서비스 구성이 단순화되어 <b>컨테이너 수가 약 30% 감소</b>, 로컬 개발 환경 구동 시간이
 											단축되었습니다.</li>
 										<li>Flink와 Hadoop 제거로 학습·운영 부담이 줄어, 팀원들이 보다 익숙한
-											<b>PostgreSQL·Elasticsearch·Spark</b> 중심으로 개발할 수 있게 되었습니다.</li>
+											<b>PostgreSQL·Elasticsearch·Spark</b> 중심으로 개발할 수 있게 되었습니다.
+										</li>
 										<li>리포트 생성 프로세스는 유지하면서도, 데이터 경로와 관리 방식이 간소화되어 <b>운영 효율성과 안정성</b>이 향상되었습니다.</li>
-										<li>실제 테스트 결과, 리포트 생성에 필요한 쿼리 응답 시간이 평균 <b>20% 이상 개선</b>되었으며, 전체 파이프라인 지연도
-											감소하였습니다.</li>
 									</ul>
 								</div>
 							</details>
