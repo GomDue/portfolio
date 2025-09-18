@@ -100,122 +100,123 @@
 				<div class="wrapper2">
 					<b class="connect">Skills.</b>
 					<div class="divider">
-						<div class="min-height">
-						</div>
-						<div class="divider1">
-						</div>
+						<div class="min-height"></div>
+						<div class="divider1"></div>
 					</div>
 					<div class="wrapper8">
+
+						<!-- Python -->
 						<div class="frame-parent">
 							<div class="python-parent">
 								<div class="hdh026163gmailcom">Python</div>
 								<div class="ratio">
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child1">
-									</div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child1"></div>
 								</div>
 							</div>
-							<div class="rest-api">데이터 처리, 모델 구축, 크롤링, 웹 서버 개발 등 프로젝트 전반에 사용한 주력 언어입니다.</div>
+							<div class="rest-api">
+								<ul class="ul">
+									<li><b>GIL:</b> 멀티스레드 한계를 고려해 비동기 I/O 기반 데이터 수집 구조를 설계했습니다.</li>
+									<li><b>정적 타이핑:</b> typing과 dataclass로 Kafka 메시지 스키마를 정의하여 데이터 정합성을 보장했습니다.</li>
+									<li><b>코드 품질:</b> 뉴스 크롤링 모듈에서 예외 처리·로깅 체계를 구축해 안정적인 재사용이 가능하도록 했습니다.</li>
+								</ul>
+							</div>
 						</div>
+
+						<!-- Kafka -->
 						<div class="frame-parent">
 							<div class="python-parent">
-								<div class="hdh026163gmailcom">FastAPI</div>
+								<div class="hdh026163gmailcom">Kafka</div>
 								<div class="ratio">
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child1">
-									</div>
-									<div class="ratio-child1">
-									</div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child1"></div>
+									<div class="ratio-child1"></div>
 								</div>
 							</div>
-							<div class="rest-api">공식 문서를 통해 모델 서빙용 REST API 구축, 비동기 및 예외 처리를 할 수 있습니다.</div>
+							<div class="rest-api">
+								<ul class="ul">
+									<li><b>순서 보장:</b> Topic, Key, Partition 구조를 적용해 동일 종목 이벤트의 순서성을 보장했습니다.</li>
+									<li><b>실시간 파이프라인:</b> 뉴스 크롤러를 Producer, Spring/Python을 Consumer로 두어 실시간 기사 처리 파이프라인을
+										구축했습니다.</li>
+									<li><b>분배 실험:</b> 메시지 재처리와 파티션 분배를 실험하며 이종 소비자 환경의 처리 차이를 확인했습니다.</li>
+								</ul>
+							</div>
 						</div>
+
+						<!-- Airflow -->
 						<div class="frame-parent">
 							<div class="python-parent">
 								<div class="hdh026163gmailcom">Apache Airflow</div>
 								<div class="ratio">
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child1">
-									</div>
-									<div class="ratio-child1">
-									</div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child-half"></div>
+									<div class="ratio-child1"></div>
 								</div>
 							</div>
-							<div class="rest-api">데이터 수집, 전처리, 분석 및 모델 학습을 자동화하는 DAG 구현해보았습니다.</div>
+							<div class="rest-api">
+								<ul class="ul">
+									<li><b>DAG 의존성:</b> Spark 집계 → 리포트 생성 → 이메일 발송 과정을 자동화했습니다.</li>
+									<li><b>재현성 확보:</b> Execution Date 기반으로 전일 데이터를 집계해 재현성 있는 파이프라인을 운영했습니다.</li>
+									<li><b>XCom:</b> Spark 결과를 후속 Task에 전달하며 데이터 흐름을 제어했습니다.</li>
+								</ul>
+							</div>
 						</div>
+
+						<!-- Spark -->
 						<div class="frame-parent">
 							<div class="python-parent">
-								<div class="hdh026163gmailcom">Docker</div>
+								<div class="hdh026163gmailcom">Apache Spark</div>
 								<div class="ratio">
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child1">
-									</div>
-									<div class="ratio-child1">
-									</div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child1"></div>
+									<div class="ratio-child1"></div>
 								</div>
 							</div>
-							<div class="rest-api">Airflow, FastAPI, Spark 환경을 Docker Compose로 통합 배포해보았습니다.</div>
+							<div class="rest-api">
+								<ul class="ul">
+									<li><b>성능 이해:</b> Catalyst 옵티마이저 실행 계획을 확인하며 Spark SQL과 Pandas 처리 방식을 비교했습니다.</li>
+									<li><b>데이터 분석:</b> 뉴스 기사 데이터를 기반으로 시간대별 집계·키워드 분석을 수행했습니다.</li>
+									<li><b>Airflow 연동:</b> SparkSubmitOperator와 연동해 분산 집계 파이프라인을 구축했습니다.</li>
+								</ul>
+							</div>
 						</div>
+
+						<!-- WebSocket -->
 						<div class="frame-parent">
 							<div class="python-parent">
-								<div class="hdh026163gmailcom">AWS (EC2 / S3 / RDS)</div>
+								<div class="hdh026163gmailcom">WebSocket (STOMP & Raw)</div>
 								<div class="ratio">
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child1">
-									</div>
-									<div class="ratio-child1">
-									</div>
-									<div class="ratio-child1">
-									</div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child"></div>
+									<div class="ratio-child1"></div>
 								</div>
 							</div>
-							<div class="rest-api">EC2 서버 관리, S3 기반 모델 저장, RDS 기반 데이터 저장·조회 경험이 있습니다.</div>
-						</div>
-						<div class="frame-parent">
-							<div class="python-parent">
-								<div class="hdh026163gmailcom">Git & Github</div>
-								<div class="ratio">
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child">
-									</div>
-									<div class="ratio-child1">
-									</div>
-									<div class="ratio-child1">
-									</div>
-								</div>
+							<div class="rest-api">
+								<ul class="ul">
+									<li><b>STOMP:</b> 방 단위 채팅·후보 공유를 구현하며 브로커 토픽 구조를 활용했습니다.</li>
+									<li><b>Raw WebSocket:</b> 실시간 커서 공유 기능을 개발하고 세션 레지스트리를 직접 관리했습니다.</li>
+									<li><b>인증/인가:</b> JWT 기반 Interceptor를 적용해 연결 시점 인증·인가를 처리했습니다.</li>
+								</ul>
 							</div>
-							<div class="rest-api">Git 기반 협업 GitHub로 형상 관리를 할 수 있습니다.</div>
 						</div>
+
 					</div>
 				</div>
+
+
+
+
 				<div class="wrapper2">
 					<b class="connect">Projects.</b>
 					<div class="divider">

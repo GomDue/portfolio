@@ -3,12 +3,14 @@
     position: relative;
     font-weight: 900;
 }
+
 .b {
     align-self: stretch;
     position: relative;
     font-size: 48px;
     color: rgba(30, 41, 59, 0.72);
 }
+
 .text-wrapper {
     width: 100%;
     display: flex;
@@ -18,6 +20,7 @@
     gap: 30px;
     max-width: 960px;
 }
+
 .title-container {
     align-self: stretch;
     height: 380px;
@@ -32,6 +35,7 @@
     background-repeat: no-repeat;
     background-position: top;
 }
+
 .icon {
     width: 160px;
     position: relative;
@@ -39,11 +43,13 @@
     max-height: 100%;
     object-fit: cover;
 }
+
 .b1 {
     align-self: stretch;
     position: relative;
     line-height: 44px;
 }
+
 .data-engineer {
     align-self: stretch;
     position: relative;
@@ -52,6 +58,7 @@
     font-weight: 500;
     color: #94a3b8;
 }
+
 .text-wrapper1 {
     flex: 1;
     display: flex;
@@ -61,6 +68,7 @@
     gap: 8px;
     min-width: 200px;
 }
+
 .wrapper {
     align-self: stretch;
     display: flex;
@@ -69,19 +77,24 @@
     justify-content: flex-start;
     gap: 32px;
 }
+
 .span {
     font-weight: 500;
     font-family: Pretendard;
 }
+
 .trade-off1 {
     font-family: Pretendard;
 }
+
 .span1 {
     font-weight: 500;
 }
+
 .trade-off {
     margin: 0;
 }
+
 .trade-off-container {
     align-self: stretch;
     position: relative;
@@ -89,6 +102,7 @@
     line-height: 180%;
     color: #475569;
 }
+
 .wrapper1 {
     align-self: stretch;
     display: flex;
@@ -99,6 +113,7 @@
     font-size: 28px;
     color: #334155;
 }
+
 .profile-wrapper {
     width: 100%;
     display: flex;
@@ -111,11 +126,13 @@
     font-size: 36px;
     color: #1e293b;
 }
+
 .connect {
     align-self: stretch;
     position: relative;
     line-height: 36px;
 }
+
 .min-height {
     width: 0px;
     position: relative;
@@ -123,6 +140,7 @@
     overflow: hidden;
     flex-shrink: 0;
 }
+
 .divider1 {
     align-self: stretch;
     position: relative;
@@ -130,6 +148,7 @@
     box-sizing: border-box;
     height: 1px;
 }
+
 .divider {
     align-self: stretch;
     display: flex;
@@ -137,10 +156,19 @@
     align-items: flex-start;
     justify-content: flex-start;
 }
+
+.ul {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    padding-left: 27px;
+}
+
 .icon-frame {
     width: 32px;
     height: 32px;
 }
+
 .wrapper3 {
     width: 320px;
     display: flex;
@@ -149,11 +177,13 @@
     justify-content: flex-start;
     gap: 12px;
 }
+
 .hdh026163gmailcom {
     position: relative;
     line-height: 28px;
     font-weight: 500;
 }
+
 .mdigithub-icon {
     width: 32px;
     position: relative;
@@ -161,6 +191,7 @@
     overflow: hidden;
     flex-shrink: 0;
 }
+
 .wrapper-parent {
     align-self: stretch;
     display: flex;
@@ -173,6 +204,7 @@
     font-size: 20px;
     color: #64748b;
 }
+
 .wrapper2 {
     width: 100%;
     display: flex;
@@ -183,6 +215,7 @@
     min-width: 360px;
     max-width: 960px;
 }
+
 .ratio-child {
     width: 12px;
     position: relative;
@@ -190,6 +223,16 @@
     background-color: #0f8cd1;
     height: 12px;
 }
+
+.ratio-child-half {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #0f8cd1 50%, transparent 50%);
+    border: 1.5px solid #0f8cd1;
+    box-sizing: border-box;
+}
+
 .ratio-child1 {
     width: 12px;
     position: relative;
@@ -198,6 +241,7 @@
     box-sizing: border-box;
     height: 12px;
 }
+
 .ratio {
     display: flex;
     flex-direction: row;
@@ -205,6 +249,7 @@
     justify-content: flex-start;
     gap: 6px;
 }
+
 .python-parent {
     align-self: stretch;
     display: flex;
@@ -213,6 +258,7 @@
     justify-content: flex-start;
     gap: 20px;
 }
+
 .frame-parent {
     align-self: stretch;
     display: flex;
@@ -221,6 +267,7 @@
     justify-content: flex-start;
     gap: 4px;
 }
+
 .rest-api {
     align-self: stretch;
     position: relative;
@@ -228,6 +275,7 @@
     font-weight: 500;
     color: #64748b;
 }
+
 .wrapper8 {
     align-self: stretch;
     display: flex;
@@ -238,6 +286,7 @@
     font-size: 20px;
     color: #024f79;
 }
+
 .favicon-child {
     position: absolute;
     top: 0px;
@@ -248,19 +297,23 @@
     width: 64px;
     height: 64px;
 }
+
 .favicon {
     width: 64px;
     position: relative;
     height: 64px;
 }
+
 .icon-frame2 {
     width: 24px;
     height: 24px;
 }
+
 .xxxxx-202xxxxx {
     position: relative;
     line-height: 24px;
 }
+
 .calendar-wrapper {
     display: flex;
     flex-direction: row;
@@ -270,6 +323,7 @@
     font-size: 16px;
     color: #94a3b8;
 }
+
 .wrapper11 {
     display: flex;
     flex-direction: column;
@@ -277,6 +331,7 @@
     justify-content: flex-start;
     gap: 8px;
 }
+
 .wrapper10 {
     align-self: stretch;
     display: flex;
@@ -286,16 +341,19 @@
     gap: 24px;
     font-size: 28px;
 }
+
 .phosphor-icons-users {
     width: 16px;
     position: relative;
     height: 16px;
 }
+
 .tag1 {
     position: relative;
     line-height: 24px;
     font-weight: 500;
 }
+
 .tag {
     border-radius: 50px;
     background-color: #e7f4fc;
@@ -307,6 +365,7 @@
     padding: 2px 8px;
     gap: 4px;
 }
+
 .tag2 {
     border-radius: 50px;
     background-color: #f2fbf7;
@@ -319,6 +378,7 @@
     gap: 4px;
     color: #15ae65;
 }
+
 .wrapper12 {
     align-self: stretch;
     display: flex;
@@ -330,6 +390,7 @@
     gap: 12px;
     color: #0369a1;
 }
+
 .mdigithub-icon1 {
     width: 24px;
     position: relative;
@@ -337,12 +398,14 @@
     overflow: hidden;
     flex-shrink: 0;
 }
+
 .github {
     position: relative;
     text-decoration: underline;
     line-height: 28px;
     font-weight: 500;
 }
+
 .feather-icons-arrow-up-right {
     width: 24px;
     position: relative;
@@ -350,6 +413,7 @@
     overflow: hidden;
     flex-shrink: 0;
 }
+
 .wrapper13 {
     display: flex;
     flex-direction: row;
@@ -357,6 +421,7 @@
     justify-content: flex-start;
     gap: 4px;
 }
+
 .link-wrapper {
     align-self: stretch;
     display: flex;
@@ -369,6 +434,7 @@
     font-size: 20px;
     color: #0d7ab6;
 }
+
 .tag4 {
     border-radius: 50px;
     background-color: #e2e8f0;
@@ -378,6 +444,7 @@
     justify-content: center;
     padding: 2px 8px;
 }
+
 .wrapper15 {
     align-self: stretch;
     display: flex;
@@ -388,6 +455,7 @@
     align-content: flex-start;
     gap: 12px;
 }
+
 .project-card {
     align-self: stretch;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.04);
@@ -402,15 +470,20 @@
     gap: 24px;
     cursor: pointer;
 }
+
 .project-card:hover,
 .project-card:focus-visible {
-  border-color: #0d7ab6; 
-  transform: translateY(-4px);
-  outline: 2px solid #0d7ab6;
+    border-color: #0d7ab6;
+    transform: translateY(-4px);
+    outline: 2px solid #0d7ab6;
 }
+
 @media (prefers-reduced-motion: reduce) {
-  .project-card { transition: none; }
+    .project-card {
+        transition: none;
+    }
 }
+
 .projects-wrapper {
     align-self: stretch;
     display: flex;
@@ -421,27 +494,32 @@
     font-size: 16px;
     color: #475569;
 }
+
 .ssafy-13th-data {
     align-self: stretch;
     position: relative;
     line-height: 36px;
     font-weight: 500;
 }
+
 .li {
     margin-bottom: 0px;
 }
+
 .airflow-spark-kafka-flink {
     margin: 0;
     font-family: inherit;
     font-size: inherit;
     padding-left: 27px;
 }
+
 .airflow-spark-kafka-container {
     flex: 1;
     position: relative;
     line-height: 28px;
     font-weight: 500;
 }
+
 .text {
     align-self: stretch;
     display: flex;
@@ -451,6 +529,7 @@
     font-size: 20px;
     color: #64748b;
 }
+
 .title {
     flex: 1;
     display: flex;
@@ -459,12 +538,14 @@
     justify-content: flex-start;
     gap: 4px;
 }
+
 .mob-ssafy-logo-blue-1-icon {
     width: 64px;
     position: relative;
     max-height: 100%;
     object-fit: cover;
 }
+
 .card {
     align-self: stretch;
     border-radius: 16px;
@@ -477,12 +558,14 @@
     padding: 24px 16px;
     gap: 12px 0px;
 }
+
 .div4 {
     position: relative;
     font-size: 64px;
     font-weight: 500;
     color: #000;
 }
+
 .text2 {
     align-self: stretch;
     display: flex;
@@ -492,8 +575,9 @@
     font-size: 20px;
     color: #64748b;
 }
+
 .activities-wrapper {
-align-self: stretch;
+    align-self: stretch;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -501,6 +585,7 @@ align-self: stretch;
     gap: 20px;
     color: #475569;
 }
+
 .paper-wrapper {
     align-self: stretch;
     display: flex;
@@ -509,6 +594,7 @@ align-self: stretch;
     justify-content: flex-start;
     color: #475569;
 }
+
 .card4 {
     align-self: stretch;
     border-radius: 16px;
@@ -518,6 +604,7 @@ align-self: stretch;
     justify-content: flex-start;
     padding: 16px;
 }
+
 .wrapper30 {
     width: 100%;
     display: flex;
@@ -528,6 +615,7 @@ align-self: stretch;
     min-width: 360px;
     max-width: 960px;
 }
+
 .container {
     align-self: stretch;
     display: flex;
@@ -539,6 +627,7 @@ align-self: stretch;
     font-size: 28px;
     color: #334155;
 }
+
 .all-wrapper {
     position: absolute;
     width: 100%;
@@ -550,6 +639,7 @@ align-self: stretch;
     align-items: flex-start;
     justify-content: flex-start;
 }
+
 .portfolio-main-screen {
     width: 100%;
     position: relative;
@@ -564,59 +654,74 @@ align-self: stretch;
 
 
 .favicon-child {
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-  background-color: #f1f5f9;
-  width: 64px;
-  height: 64px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    background-color: #f1f5f9;
+    width: 64px;
+    height: 64px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.favicon-whereshouldwego { background-image: url('/assets/whereshouldwego/whereshouldwego.png'); }
-.favicon-klyde { background-image: url('/assets/klyde/klyde.png'); }
-.favicon-ssabab { background-image: url('/assets/ssabab/ssabab.png'); }
-.favicon-helpmoney { background-image: url('/assets/help_money/help_money.png'); }
-.favicon-paper { background-image: url('/assets/paper/paper.png'); }
+.favicon-whereshouldwego {
+    background-image: url('/assets/whereshouldwego/whereshouldwego.png');
+}
+
+.favicon-klyde {
+    background-image: url('/assets/klyde/klyde.png');
+}
+
+.favicon-ssabab {
+    background-image: url('/assets/ssabab/ssabab.png');
+}
+
+.favicon-helpmoney {
+    background-image: url('/assets/help_money/help_money.png');
+}
+
+.favicon-paper {
+    background-image: url('/assets/paper/paper.png');
+}
 
 
 /* 인용구 박스 */
 .quote-box {
-  text-align: center;
-  font-size: 28px;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
 }
 
 .quote-mark {
-  color: #0f8cd1;
-  font-size: 32px;
-  font-weight: 900;
+    color: #0f8cd1;
+    font-size: 32px;
+    font-weight: 900;
 }
 
 .story-text p:first-child {
-  font-size: 22px; 
-  font-weight: 600;
-  color: #0f172a;
-  border-left: 4px solid #0f8cd1;
-  padding-left: 12px;
-  margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #0f172a;
+    border-left: 4px solid #0f8cd1;
+    padding-left: 12px;
+    margin-bottom: 12px;
 }
 
 .story-text b {
-  color: #0f8cd1;  /* 성능·안정성·확장성·유지보수성 */
+    color: #0f8cd1;
+    /* 성능·안정성·확장성·유지보수성 */
 }
 
 .story-text p {
-  line-height: 1.8;
-  margin-bottom: 14px;
+    line-height: 1.8;
+    margin-bottom: 14px;
 }
