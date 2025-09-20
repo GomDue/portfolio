@@ -71,15 +71,6 @@
                         <div class="tag1">대표 성과 | 실시간 주가·뉴스 파이프라인 및 브로드캐스트 구축</div>
                     </div>
                 </div>
-                <div class="link-wrapper">
-                    <div class="wrapper3" id="buttonContainer"
-                        data-href="https://band-cheddar-f06.notion.site/22aefa246e29804ea730f6f523c3050d?source=copy_link"
-                        role="link" tabindex="0" aria-label="Notion 문서 열기">
-                        <img class="mdinotion-icon" alt="" src="/assets/notion_blue_icon.svg">
-                        <div class="github">Notion</div>
-                        <img class="feather-icons-arrow-up-right" alt="" src="/assets/arrow_up_right_blue_icon.svg">
-                    </div>
-                </div>
             </div>
 
             <!-- 본문 -->
@@ -109,6 +100,8 @@
 
                             <div class="subheading">프로젝트 목표</div>
                             <ul class="ul">
+                                <li>실제 자산 위험 없이 연습할 수 있는 <b>실시간 모의투자 기능</b>을 제공하여, 사용자가 배운 내용을 직접 체험하고 투자 감각을 기를 수 있도록
+                                    합니다.</li>
                                 <li>투자 결과뿐만 아니라 <b>원인 분석과 맥락 제공</b>을 통해 초보 투자자의 이해를 돕습니다.</li>
                                 <li>지표와 용어를 쉽게 풀어 설명하여 <b>스스로 판단할 수 있는 능력</b>을 강화합니다.</li>
                                 <li>실시간 데이터와 AI를 활용한 <b>투자 코칭 및 학습 지원 서비스</b>를 제공합니다.</li>
@@ -123,20 +116,20 @@
 
                             <div class="subheading">주요 기능</div>
                             <ul class="ul">
-                                <li><b>실시간 모의 투자:</b> 실시간 데이터 기반의 가상 매매 기능을 제공하여 투자 감각을 형성할 수 있도록 합니다.</li>
-                                <li><b>AI 챗봇:</b> 어려운 용어와 지표를 쉽게 설명하고 실시간 질의응답을 제공합니다.</li>
-                                <li><b>기업 인사이트 분석:</b> 과거 차트, 뉴스, 공시 데이터를 종합 분석하여 주가 변동의 배경을 제공합니다.</li>
-                                <li><b>투자 코칭 서비스:</b> 사용자의 보유 종목과 매매 패턴을 분석하여 습관과 성향을 진단합니다.</li>
+                                <li><b>실시간 모의 투자:</b> 실시간 주가 데이터를 활용한 가상 매매 기능을 제공하여, 사용자가 위험 부담 없이 투자 감각을 익힐 수 있도록 합니다.
+                                </li>
+                                <li><b>AI 챗봇:</b> 투자 초보자도 이해할 수 있도록 어려운 용어와 지표를 쉽게 풀어 설명하며, 실시간 질의응답을 지원합니다.</li>
+                                <li><b>기업 인사이트 분석:</b> 과거 차트, 뉴스, 공시 데이터를 종합적으로 분석하여 주가 변동의 원인과 맥락을 제공합니다.</li>
+                                <li><b>투자 코칭 서비스:</b> 사용자의 보유 종목과 매매 패턴을 분석해 습관과 성향을 진단하고, 개선 방향을 제시합니다.</li>
                             </ul>
                             <br>
-
 
                             <div class="subheading">아키텍처</div>
                             <figure class="img-card">
                                 <img class="image lightboxable" src="/assets/help_money/architecture_helpmoney.png"
                                     alt="돈와줘 서비스 아키텍처 다이어그램" loading="lazy">
                                 <figcaption class="sr-only">
-                                    WhereShouldWeGo 서비스 아키텍처 다이어그램
+                                    돈와줘 서비스 아키텍처 다이어그램
                                 </figcaption>
                             </figure>
                             <br>
@@ -153,58 +146,121 @@
                                 <tbody>
                                     <tr>
                                         <td>Data Ingestion</td>
-                                        <td><span class="badge strong">Python</span> <span class="badge">(WebSocket,
-                                                feedparser)</span></td>
-                                        <td>한국투자증권(KIS) WebSocket 시세·호가 데이터 및 RSS 뉴스 데이터 수집</td>
+                                        <td>
+                                            <span class="badge strong">Python</span>
+                                            <span class="badge strong">WebSocket</span>
+                                            <span class="badge strong">feedparser</span>
+                                            <span class="badge strong">BeautifulSoup</span>
+                                        </td>
+                                        <td>주식 시세·호가를 <b>실시간 WebSocket</b>으로 수집하고, 뉴스는 RSS/크롤링으로 본문까지 확보</td>
                                     </tr>
                                     <tr>
                                         <td>Messaging</td>
                                         <td><span class="badge strong">Apache Kafka</span></td>
-                                        <td>시세·호가·뉴스 데이터를 토픽 단위로 발행 및 구독, 파티션 단위 순서 보장</td>
+                                        <td>수집 데이터를 <b>토픽 단위로 분리 발행</b>해 Consumer가 안정적으로 구독, <b>순서 보장 및 확장성</b> 확보</td>
                                     </tr>
                                     <tr>
                                         <td>Back-End</td>
-                                        <td><span class="badge strong">Spring Boot</span></td>
-                                        <td>Kafka Consumer, 데이터 가공 및 API 제공, WebSocket(STOMP) 기반 실시간 브로드캐스트</td>
+                                        <td>
+                                            <span class="badge strong">Spring Boot</span>
+                                            <span class="badge strong">STOMP</span>
+                                            <span class="badge">JPA</span>
+                                            <span class="badge">JWT</span>
+                                        </td>
+                                        <td>Kafka Consumer로 데이터 가공 후 <b>실시간 브로드캐스트</b> 및 <b>API 제공</b>, 인증·보안 처리</td>
                                     </tr>
                                     <tr>
                                         <td>Cache</td>
-                                        <td><span class="badge strong">Redis</span></td>
-                                        <td>실시간 랭킹 캐시 및 고속 조회 지원</td>
+                                        <td><span class="badge">Redis</span></td>
+                                        <td>조회 빈도가 높은 종목·랭킹 데이터를 <b>캐시</b>하여 <b>수 ms 단위 응답 속도</b> 제공</td>
                                     </tr>
                                     <tr>
                                         <td>Database (문서형)</td>
                                         <td><span class="badge strong">MongoDB</span></td>
-                                        <td>뉴스 원문 및 메타데이터 영속화, 중복 방지 unique index 적용</td>
+                                        <td>뉴스 원문·이미지 저장, <b>중복 방지 인덱스</b>로 데이터 품질 보장</td>
                                     </tr>
                                     <tr>
                                         <td>Database (관계형)</td>
-                                        <td><span class="badge strong">AWS RDS</span> <span
-                                                class="badge">(MySQL/PostgreSQL)</span></td>
-                                        <td>사용자, 주문, 계정 등 운영 데이터 저장</td>
+                                        <td><span class="badge strong">AWS RDS(PostgreSQL)</span>
+                                        <td>사용자, 주문, 계정 등 <b>운영 데이터</b>와 <b>분봉 시세 데이터</b> 저장</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AI Service</td>
+                                        <td><span class="badge strong">FastAPI</span>, <span class="badge">OpenAI
+                                                Embedding</span></td>
+                                        <td>뉴스 본문을 <b>벡터화</b>하여 검색·추천 기능에 활용</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Workflow</td>
+                                        <td><span class="badge strong">Apache Airflow</span>
+                                        <td>장마감 시 <b>데이터 교정</b> 및 <b>뉴스 집계 리포트</b> 자동화</td>
                                     </tr>
                                     <tr>
                                         <td>Front-End</td>
-                                        <td><span class="badge">React</span> <span class="badge">Vite</span>
-                                            <span class="badge">Tailwind</span>
+                                        <td><span class="badge">React</span> <span class="badge">Vite</span> <span
+                                                class="badge">Tailwind</span> <span class="badge">TradingView</span>
                                         </td>
-                                        <td>직관적인 UI/UX 구현 및 시각화</td>
+                                        <td><b>실시간 차트 시각화</b> 및 직관적인 UI/UX 구현</td>
                                     </tr>
                                     <tr>
                                         <td>Infra</td>
                                         <td><span class="badge">Nginx</span> <span class="badge strong">Docker</span>
-                                            <span class="badge strong">AWS
-                                                EC2</span>
+                                            <span class="badge strong">AWS EC2</span>
                                         </td>
-                                        <td>FE/BE 리버스 프록시, TLS 처리, 컨테이너 기반 오케스트레이션 및 클라우드 운영</td>
+                                        <td>Nginx로 <b>TLS/CORS 통합 관리</b>, Docker Compose로 <b>교체 배포</b> 및 클라우드 운영</td>
                                     </tr>
                                 </tbody>
                             </table>
                             <br>
 
+                            <div class="subheading">기술 선정 이유</div>
+                            <ul class="ul">
+                                <li><b>Kafka</b>: 단순 메시지 큐(RabbitMQ)보다 <b>순서 보장</b>과 <b>파티션 기반 확장성</b>이 뛰어나 실시간 시세·호가
+                                    처리에 적합했습니다.</li>
+                                <li><b>MongoDB</b>: 뉴스 원문·이미지 등 <b>비정형 데이터 저장</b>에 강점이 있어 문서형 저장소로 채택했습니다.</li>
+                                <li><b>PostgreSQL</b>: 사용자/주문/계좌와 같은 <b>관계형 데이터</b> 관리 및 분석용 시세 데이터 저장에 안정적이었습니다.</li>
+                                <li><b>Airflow</b>: Spring Batch보다 <b>DAG 기반 시각화와 스케줄링</b>이 용이해 배치 파이프라인 자동화에 적합했습니다.
+                                </li>
+                                <li><b>Redis</b>: 조회 빈도가 높은 종목·랭킹 데이터를 <b>ms 단위 응답</b>으로 제공하기 위해 캐시 계층으로 도입했습니다.</li>
+                                <li><b>FastAPI + OpenAI Embedding</b>: 뉴스 본문을 벡터화하여 <b>검색·추천 기능</b>에 활용할 수 있도록 구성했습니다.
+                                </li>
+                                <li><b>Docker & Nginx</b>: 컨테이너 단위 배포와 <b>TLS/CORS 관리</b>를 단일 환경에서 처리할 수 있어 운영 편의성을
+                                    확보했습니다.</li>
+                            </ul>
+                            <br>
 
 
-                            <div class="subheading">시연</div>
+                            <div class="subheading">UI</div>
+                            <div class="demo-grid">
+                                <div class="project-card">
+                                    <figure>
+                                        <img class="video lightboxable" src="/assets/help_money/main_page.png"
+                                            alt="대시보드 시연" loading="lazy">
+                                        <figcaption class="sr-only">대시보드 기능 시연</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="project-card">
+                                    <figure>
+                                        <img class="video lightboxable" src="/assets/help_money/stock_detail.png"
+                                            alt="챗봇 시연" loading="lazy">
+                                        <figcaption class="sr-only">챗봇 기능 시연</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="project-card">
+                                    <figure>
+                                        <img class="video lightboxable" src="/assets/help_money/my_stock.png"
+                                            alt="뉴스 상세 및 댓글 시연" loading="lazy">
+                                        <figcaption class="sr-only">뉴스 상세 및 댓글 기능 시연</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="project-card">
+                                    <figure>
+                                        <img class="video lightboxable" src="/assets/help_money/portpolio.png"
+                                            alt="검색 및 정렬 시연" loading="lazy">
+                                        <figcaption class="sr-only">검색 및 정렬 기능 시연</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
 
 
                         </div>
@@ -225,17 +281,21 @@
                     <div class="contents-wrapper">
                         <div class="div">
                             <ul class="ul">
-                                <li><b>데이터 파이프라인 설계/구현</b>: KIS WebSocket과 RSS 크롤러를 개발하여 데이터를 Kafka로 발행했습니다.</li>
-                                <li><b>실시간 처리 서버 개발</b>: Spring Boot Consumer로 Kafka 메시지를 구독하고 STOMP WebSocket 브로드캐스트를
-                                    구현했습니다.</li>
-                                <li><b>데이터베이스 연동</b>: 뉴스는 <b>MongoDB</b>에, 사용자·주문 데이터는 <b>PostgreSQL</b>에 저장하는 구조를
-                                    설계했습니다.</li>
-                                <li><b>인프라/배포 환경 구축</b>: <b>Nginx 리버스 프록시</b>와 <b>Docker Compose</b> 기반 컨테이너 환경을 AWS
-                                    EC2에서 운영했습니다.</li>
+                                <li><b>데이터 파이프라인 설계·구현</b>: WebSocket 세션 제한을 고려해 종목을 균등 분배하고, 스레드 기반 병렬 실행으로 여러 세션을 동시에
+                                    운영했습니다. 수집된 데이터는 단일 Kafka Producer를 통해 일원화해 발행했습니다.</li>
+                                <li><b>실시간 처리 서버 개발</b>: Spring Boot Consumer에서 Kafka 메시지를 구독하고, 체결·호가 데이터를 분리 처리한 뒤
+                                    STOMP WebSocket으로 실시간 브로드캐스트를 구현했습니다.</li>
+                                <li><b>뉴스 수집·정제</b>: RSS 기반으로 뉴스를 수집하고 본문 크롤링을 통해 MongoDB에 원문을 저장, PostgreSQL에는 메타데이터와
+                                    임베딩을 함께 저장하여 검색과 분석이 가능하도록 구성했습니다.</li>
+                                <li><b>배치 파이프라인 개발</b>: Apache Airflow를 활용해 KIS REST API에서 일일 종가 데이터를 수집하고 PostgreSQL 기반
+                                    데이터 웨어하우스(DW)에 적재했습니다. 이를 기반으로 보유 종목의 평가 금액을 일 단위로 계산·저장하는 작업을 자동화했습니다.</li>
+                                <li><b>인프라·배포 운영</b>: Docker Compose로 전 구성 요소를 컨테이너화하고, Nginx 리버스 프록시로 TLS·CORS를 처리했습니다.
+                                    AWS EC2에서 안정적으로 운영하며 Airflow로 배치 작업을 스케줄링했습니다.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
 
                 <!-- 3. 개발 상세 내용 -->
                 <div class="wrapper5">
@@ -251,150 +311,195 @@
                     <div class="contents-wrapper">
                         <div class="div">
                             <details>
-                                <summary><b>3.1. 실시간 데이터 수집 및 메시징 파이프라인</b></summary>
+                                <summary><b>3.1. KIS 기반 실시간 주가 데이터 수집 파이프라인</b></summary>
                                 <div class="content">
                                     <h4>배경</h4>
                                     <ul class="ul">
-                                        <li>서비스는 <b>실시간 주식 시세·호가 데이터</b>와 <b>뉴스 데이터</b>를 모아 사용자에게 투자 인사이트와 코칭 기능을 제공합니다.
-                                        </li>
-                                        <li>이를 위해 데이터를 <b>안정적으로 수집</b>하고 <b>빠르게 전달</b>하는 구조가 필요했습니다.</li>
+                                        <li>서비스는 <b>201건의 WebSocket 요청(100종목 시세 + 100종목 호가 + KOSPI 지수)</b>을 동시에 처리해야
+                                            했습니다.</li>
+                                        <li>KIS 정책상 1세션은 최대 41건만 가능하므로, <b>세션 분할 및 병렬 실행</b> 없이는 안정적인 수집이 불가능했습니다.</li>
                                     </ul>
 
                                     <h4>도전</h4>
                                     <ul class="ul">
-                                        <li>KIS WebSocket API는 <b>세션당 종목 수 제한</b>이 있어 여러 종목을 동시에 받아오기 어려웠습니다.</li>
-                                        <li>연결이 끊기거나 응답이 늦어지면 전체 흐름에 <b>병목</b>이 생길 수 있었습니다.</li>
-                                        <li>뉴스는 RSS로 받아오는데, <b>중복 기사</b>가 많고 본문을 가져오지 못하는 경우도 있었습니다.</li>
+                                        <li>5개의 계좌 × 41건 = 최대 205건 제약 조건을 맞춰야 했습니다.</li>
+                                        <li>세션이 끊기면 전체 스트림에 영향을 주기 때문에 <b>자동 재연결</b>과 <b>안정적인 부하 분산</b>이 필요했습니다.</li>
+                                        <li>Kafka 전송이 지연되면 전체 파이프라인의 병목으로 이어질 수 있어 성능 관리가 중요했습니다.</li>
                                     </ul>
 
                                     <h4>해결 방안</h4>
-                                    <figure class="img-card">
-                                        <img class="image lightboxable"
-                                            src="/assets/help_money/data_diagram_heplmoney.png"
-                                            alt="WhereShouldWeGo 서비스 아키텍처 다이어그램" loading="lazy">
-                                        <figcaption class="sr-only">
-                                            WhereShouldWeGo 서비스 아키텍처 다이어그램
-                                        </figcaption>
-                                    </figure>
                                     <ul class="ul">
-                                        <li><b>KISWebSocket</b> 클래스를 구현하여 세션을 나누고, <b>자동 재연결</b> 기능을 넣어 안정적으로 데이터를
-                                            수집했습니다.</li>
-                                        <li><b>KIS2KafkaProducer</b>를 프로젝트 전체에서 하나만 사용하도록 설계해, 받은 데이터를 <b>Kafka</b>로 모아
-                                            전달했습니다.</li>
-                                        <li><b>RSSIngestService</b>에서 RSS를 읽은 뒤 본문을 크롤링해 <b>MongoDB에는 원문</b>을,
-                                            <b>PostgreSQL에는 요약 정보와 벡터</b>를 저장했습니다.
-                                        </li>
-                                        <li>본문이 없거나 텍스트가 전혀 없는 기사는 <b>자동으로 건너뛰도록</b> 처리했습니다.</li>
+                                        <li><b>균등 분배 알고리즘</b>: 종목 코드를 계좌 개수로 나눠 <code>% 연산</code>으로 공평하게 배정했습니다.</li>
+                                        <li><b>멀티스레드 구조</b>: Python <code>threading</code>을 활용해 5개의 스레드를 실행하고, 각 스레드가 1개
+                                            계좌 세션을 관리했습니다.</li>
+                                        <li><b>자동 재연결</b>: <code>KISWebSocket</code> 클래스에 예외 처리와 backoff 로직을 넣어 끊김 발생 시
+                                            즉시 재연결했습니다.</li>
+                                        <li><b>Kafka Producer 단일화</b>: <code>KIS2KafkaProducer</code>를 전역에서 공유해 모든 스레드가
+                                            안정적으로 Kafka에 메시지를 발행했습니다.</li>
+                                        <li><b>성능 로깅</b>: 메시지 전송 시 end-to-end latency와 큐 지연을 기록해 ms 단위로 병목을 추적했습니다.</li>
                                     </ul>
 
                                     <h4>성과</h4>
                                     <ul class="ul">
-                                        <li>주식 데이터는 <b>평균 2~3ms, 최대 10ms</b> 안에 안정적으로 Kafka로 전달되었습니다.</li>
-                                        <li>MongoDB와 PostgreSQL을 함께 사용해 <b>중복 없는 뉴스 관리</b>와 <b>검색·추천에 활용 가능한 데이터</b>를
-                                            동시에 확보했습니다.</li>
-                                        <li>전체 과정이 자동으로 이어져 <b>사람 개입 없이 안정적으로 동작</b>했습니다.</li>
+                                        <li>WebSocket → Kafka 구간의 평균 지연을 <b>1ms 미만</b>으로 유지했습니다.</li>
+                                        <li>멀티스레드 + 균등 분배로 201건 요청을 안정적으로 처리하며, 정책 범위 내에서 확장성을 확보했습니다.</li>
+                                        <li>로그 기반 성능 추적으로 장애 발생 시 <b>어느 단계에서 병목이 생겼는지 즉시 파악</b>할 수 있었습니다.</li>
                                     </ul>
                                 </div>
                             </details>
 
 
-
                             <details>
-                                <summary><b>3.2. WebSocket 기반 실시간 시세 브로드캐스트</b></summary>
+                                <summary><b>3.2. 뉴스 데이터 수집 및 저장 파이프라인</b></summary>
                                 <div class="content">
                                     <h4>배경</h4>
                                     <ul class="ul">
-                                        <li>서비스의 핵심은 <b>실시간 주식 데이터 전송(브로드캐스트)</b>과 <b>빠른 응답성</b>입니다.</li>
-                                        <li>사용자가 보는 화면에 데이터가 <b>즉시 반영</b>되어야 하고, 동시에 <b>DB 저장</b>과 <b>캐싱</b>도 함께 이루어져야
+                                        <li>주가 변동은 뉴스와 밀접하게 연결되어 있으므로, <b>RSS 기반 뉴스 데이터</b>를 안정적으로 수집해야 했습니다.</li>
+                                        <li>단순 RSS 제목만으로는 부족하여, 본문 크롤링 및 임베딩까지 수행해 <b>분석·추천</b>에 활용 가능한 데이터로 가공해야 했습니다.
+                                        </li>
+                                    </ul>
+
+                                    <h4>도전</h4>
+                                    <ul class="ul">
+                                        <li>뉴스 RSS에는 <b>중복 기사</b>가 많아, 매번 수집 시 동일 데이터가 삽입될 위험이 있었습니다.</li>
+                                        <li>본문이 없는 기사나 광고성 기사 등 <b>유효하지 않은 데이터</b>를 걸러내야 했습니다.</li>
+                                        <li>MongoDB와 PostgreSQL을 함께 사용해야 했기 때문에, <b>저장소 간 정합성</b> 관리도 필요했습니다.</li>
+                                    </ul>
+
+                                    <h4>해결 방안</h4>
+                                    <ul class="ul">
+                                        <li><b>RSSIngestService</b>
+                                            <ul>
+                                                <li>Feedparser로 RSS를 읽고, 각 기사 링크를 해시 처리하여 <b>고유 ID</b>를 생성했습니다.</li>
+                                                <li><code>PostgresArticleRepository</code>에서 중복 여부를 확인해, 기존에 저장된 기사는
+                                                    자동으로 건너뛰었습니다.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>본문 크롤링</b>
+                                            <ul>
+                                                <li><code>extract_article</code> 함수를 이용해 본문 블록을 텍스트/이미지 단위로 분리했습니다.</li>
+                                                <li>본문이 비어있거나 텍스트가 전혀 없는 기사는 <b>자동 제외</b> 처리했습니다.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>이중 저장 전략</b>
+                                            <ul>
+                                                <li><b>MongoDB</b>: 기사 원문(content_blocks, 이미지 포함)을 저장하여 원본 데이터 영속화.</li>
+                                                <li><b>PostgreSQL</b>: 제목, 링크, 카테고리, 발행일, 벡터를 저장해 검색·추천에 활용.</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>임베딩 처리</b>
+                                            <ul>
+                                                <li>본문 텍스트를 OpenAI <code>text-embedding-3-small</code> 모델로 변환해 벡터를
+                                                    생성했습니다.</li>
+                                                <li>향후 <b>추천 시스템 및 문서 검색</b>에 활용할 수 있는 구조를 마련했습니다.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <h4>성과</h4>
+                                    <ul class="ul">
+                                        <li>MongoDB와 PostgreSQL에 <b>중복 없는 뉴스 데이터</b>를 안정적으로 저장했습니다.</li>
+                                        <li>텍스트·이미지 블록 단위의 세분화 저장으로, 이후 <b>다양한 분석 및 시각화</b>에 활용 가능했습니다.</li>
+                                        <li>기사 임베딩을 통해 <b>추천 시스템 기반</b>을 마련하여, 데이터 활용 범위를 확장했습니다.</li>
+                                    </ul>
+                                </div>
+                            </details>
+
+
+                            <details>
+                                <summary><b>3.3. WebSocket(STOMP) 기반 실시간 시세 브로드캐스트</b></summary>
+                                <div class="content">
+                                    <h4>배경</h4>
+                                    <ul class="ul">
+                                        <li>서비스의 핵심은 <b>실시간 주식 데이터 브로드캐스트</b>와 <b>빠른 응답성 확보</b>였습니다.</li>
+                                        <li>사용자가 보는 화면에는 데이터가 <b>즉시 반영</b>되어야 하고, 동시에 <b>DB 저장 및 분석용 처리</b>도 함께 이루어져야
                                             했습니다.</li>
                                     </ul>
 
                                     <h4>도전</h4>
                                     <ul class="ul">
-                                        <li>Kafka에서 받은 한 건의 메시지를 가지고 <b>화면 전송, DB 저장, 캐시 업데이트</b>까지 모두 처리해야 했습니다.</li>
-                                        <li>여러 처리가 한 곳에서 동시에 이뤄지다 보니 <b>속도 저하</b>나 <b>처리 지연</b>이 생길 수 있었습니다.</li>
-                                        <li>특히 화면 전송은 몇 ms라도 지연되면 사용자가 바로 느낄 수 있어 <b>빠른 반응</b>이 필수였습니다.</li>
+                                        <li>Kafka에서 전달된 메시지를 <b>화면 전송, DB 저장, 모니터링 로그</b>까지 동시에 처리해야 했습니다.</li>
+                                        <li>여러 처리가 한곳에 몰리면서 <b>속도 저하</b>와 <b>병목 현상</b> 위험이 있었습니다.</li>
+                                        <li>특히 <b>STOMP WebSocket 전송 지연</b>은 사용자가 체감할 수 있어 ms 단위 최적화가 필요했습니다.</li>
                                     </ul>
 
                                     <h4>해결 방안</h4>
                                     <figure class="img-card">
                                         <img class="image lightboxable"
                                             src="/assets/help_money/sequence_diagram_kafka_broadcast.png"
-                                            alt="WhereShouldWeGo 서비스 아키텍처 다이어그램" loading="lazy">
+                                            alt="실시간 브로드캐스트 구조 다이어그램" loading="lazy">
                                         <figcaption class="sr-only">
-                                            WhereShouldWeGo 서비스 아키텍처 다이어그램
+                                            실시간 브로드캐스트 구조 다이어그램
                                         </figcaption>
                                     </figure>
                                     <ul class="ul">
                                         <li><b>Spring Boot 기반 MarketStreamService 구현</b>
                                             <ul>
-                                                <li><code>@KafkaListener</code>를 이용해 <b>체결 데이터(tick)</b>와 <b>호가
-                                                        데이터(ask)</b>를 분리 처리했습니다.</li>
-                                                <li>받은 데이터는 <code>KISParser</code>로 해석한 뒤, <b>STOMP WebSocket</b>을 통해
-                                                    <code>/topic/stock/{code}</code> 채널로 전송했습니다.
-                                                </li>
+                                                <li><code>@KafkaListener</code>로 <b>체결 데이터(Tick)</b>, <b>호가
+                                                        데이터(Ask)</b>, <b>지수 데이터(Index)</b>를 각각 구독.</li>
+                                                <li><code>KISParser</code>를 통해 메시지 Raw 데이터를 파싱 후, 구조화된
+                                                    DTO(<code>StockResponse</code>)로 변환.</li>
+                                                <li>STOMP WebSocket 채널
+                                                    (<code>/topic/stock/{tick|ask|index}.{code}</code>)로 즉시 브로드캐스트.</li>
                                             </ul>
                                         </li>
+                                        <li><b>고유 이벤트 ID 생성</b>: 날짜 + 시퀀스를 조합해 매 이벤트마다 unique ID를 부여, 로그·DB 저장 시 추적 가능성
+                                            확보.</li>
+                                        <li><b>성능 모니터링 내장</b>: Python Producer의 <code>recvTs</code> → Kafka → Spring
+                                            Consumer → WebSocket 전송까지 end-to-end latency 측정, 로그에 기록하여 실시간 성능 추적 가능.</li>
                                     </ul>
 
                                     <h4>성과</h4>
                                     <ul class="ul">
-                                        <li>사용자의 화면에 데이터가 <b>거의 지연 없이 즉시 반영</b>되는 실시간 전송 구조를 완성했습니다.</li>
-                                        <li>Kafka 처리 시간을 로그로 기록해 모니터링할 수 있어, <b>시스템 안정성과 성능 추적</b>이 가능해졌습니다.</li>
+                                        <li><b>KIS WebSocket → Python Producer → Kafka → Spring Consumer → WebSocket
+                                                Client</b> 구간 전체 latency: <b>평균 4ms, 최대 10ms</b>.</li>
+                                        <li>사용자 화면에는 <b>거의 실시간 반영</b>되었으며, 타 증권사 앱과 비교해도 체감 차이가 없음.</li>
+                                        <li>Latency 로그 기반으로 <b>성능 병목 추적 및 SLA 관리</b> 가능.</li>
+                                        <li>Listener와 Parser를 분리한 구조 덕분에 <b>유지보수성과 확장성</b>을 확보.</li>
                                     </ul>
                                 </div>
                             </details>
 
 
-
                             <details>
-                                <summary><b>3.3. 당일 주가 시세 저장</b></summary>
+                                <summary><b>3.4. 배치 데이터 처리 (진행 중)</b></summary>
                                 <div class="content">
                                     <h4>배경</h4>
                                     <ul class="ul">
-                                        <li>사용자에게 <b>당일의 분봉 데이터</b>를 실시간으로 보여줄 수 있어야 했습니다.</li>
-                                        <li>단순히 WebSocket 스트리밍만으로는 과거 데이터를 복원하기 어려워, 별도의 저장 및 보완 방식이 필요했습니다.</li>
+                                        <li>실시간 스트리밍 데이터만으로는 분석 및 장마감 기준 교정이 어려워 일 단위 집계가 필요했습니다.</li>
+                                        <li>사용자 투자 리포트와 장기 인사이트 제공을 위해 신뢰 가능한 일별 지표가 필요했습니다.</li>
                                     </ul>
 
                                     <h4>도전</h4>
                                     <ul class="ul">
-                                        <li>사용자는 체감 지연이 민감하기 때문에 <b>최대한 빠르게 데이터 전달</b>이 필요했습니다.</li>
-                                        <li>동시에 다른 주식 서비스(KIS 차트 등)와 비교해도 <b>정확한 분봉 데이터</b>를 보장해야 했습니다.</li>
+                                        <li>하루 단위로 다수 종목의 시세를 안정적으로 수집·적재해야 했습니다.</li>
+                                        <li>실시간 데이터와 배치 데이터 간 정합성을 유지하는 절차가 필요했습니다.</li>
                                     </ul>
 
-                                    <h4>해결 방안</h4>
+                                    <h4>해결 방안 (진행 중)</h4>
                                     <ul class="ul">
-                                        <li><b>Kafka 되감기(Offset rewind)</b>
+                                        <li><b>Apache Airflow DAG</b> 설계
                                             <ul>
-                                                <li>Kafka에서 컨슈머 오프셋을 조정해 과거 데이터를 재전송하는 방법을 검토했습니다.</li>
-                                                <li>지연은 적지만, Kafka는 장기 저장에 적합하지 않고 분봉 집계에 한계가 있었습니다.</li>
-                                            </ul>
-                                        </li>
-                                        <li><b>Python 집계 후 DB 저장</b>
-                                            <ul>
-                                                <li>WebSocket에서 받은 tick 데이터를 Python에서 직접 1분 단위로 집계해 DB에 저장하는 방법을
-                                                    검토했습니다.</li>
-                                                <li>지연은 적지만, 자체 구현에 의존하여 정확도 문제와 보정 어려움이 있었습니다.</li>
-                                            </ul>
-                                        </li>
-                                        <li><b>KIS REST API 주기적 호출</b>
-                                            <ul>
-                                                <li>KIS에서 제공하는 분봉 조회 REST API를 1분 주기로 호출해 Postgres에 저장하는 방식을 적용했습니다.
+                                                <li>장마감 후 자동 실행되도록 스케줄링했습니다.</li>
+                                                <li>KIS REST API에서 당일 시세를 수집하여 <code>dw_fact_daily_prices</code> 테이블에
+                                                    적재합니다.</li>
+                                                <li>보유 종목(<code>owned_stocks</code>)과 조인하여 일별 포지션을 계산하고
+                                                    <code>dw_fact_positions_daily</code>로 업데이트합니다.
                                                 </li>
-                                                <li><b>정확도가 보장</b>되고, Airflow를 통해 장마감 시점에 전체 데이터를 교정할 수도 있었습니다.</li>
+                                                <li>API 실패·누락 대비 재시도 및 예외 로깅을 포함했습니다.</li>
                                             </ul>
                                         </li>
                                     </ul>
 
-                                    <h4>성과</h4>
+                                    <h4>성과 (예상)</h4>
                                     <ul class="ul">
-                                        <li>최종적으로 REST API 기반 방식을 선택하여, 다른 서비스와 비교해도 <b>일관된 분봉 데이터</b>를 제공할 수 있었습니다.
-                                        </li>
-                                        <li>하루치 분봉만 관리하면 되기 때문에 DB 용량과 API 호출량 모두 안정적으로 운영할 수 있었습니다.</li>
-                                        <li>장마감 시점에는 Airflow를 활용한 교정 파이프라인을 적용해, <b>누락·불일치 없는 데이터 품질</b>을 확보했습니다.</li>
+                                        <li>일 단위 포지션·손익 추적이 가능해져 리포트 형태로 투자 현황을 제공할 수 있습니다.</li>
+                                        <li>스트리밍 기반 화면과 배치 기반 분석이 결합된 하이브리드 구조로 확장성이 확보됩니다.</li>
+                                        <li>MVP 이후 투자 코칭·리포트 기능의 기반이 됩니다.</li>
                                     </ul>
                                 </div>
-                                </detail>
+                            </details>
+
                         </div>
                     </div>
                 </div>
@@ -413,20 +518,27 @@
                     <div class="contents-wrapper">
                         <div class="div">
                             <ul class="ul">
-                                <li><b>아직 진행 중인 프로젝트</b>: 현재도 개발이 진행되고 있으며, 실시간 기능 고도화와 보안 강화 같은 과제가 남아 있습니다. 완성된 성과보다는 과정 속에서의 배움이 많았습니다.</li>
-                                <li><b>실시간 파이프라인 구축 경험</b>: KIS WebSocket, Kafka, Spring Boot를 연결하며 평균 2~3ms 지연으로 안정적인
-                                    데이터 흐름을 만들었습니다. 단순히 구현이 아니라, 성능 수치를 측정하고 개선하는 과정을 통해 실시간 시스템의 감각을 익혔습니다.</li>
-                                <li><b>보안 요소의 필요성 체감</b>: STOMP WebSocket은 기본 기능만 구현한 상태라, 연결 단계에서 토큰 검증이 미흡했습니다. 이후 JWT
-                                    인증·인가를 강화하고 세션 제어를 도입해야 함을 깨달았습니다.</li>
-                                <li><b>데이터 품질 관리의 중요성</b>: 뉴스 크롤링 과정에서 본문 누락이나 중복 문제가 발생했습니다. 이를 통해 데이터 수집 단계부터 품질 검증과
-                                    보정 로직을 넣는 것이 필수적임을 알게 되었습니다.</li>
-                                <li><b>운영 환경 개선 필요</b>: 현재는 Docker Compose 기반으로만 운영 중이라, 장애 감지와 알림이 부족합니다.
-                                    Prometheus·Grafana 같은 모니터링 체계가 필요하다는 점을 배웠습니다.</li>
+                                <li><b>진행형 프로젝트 경험</b>: 아직 개발이 진행 중인 프로젝트로, <b>실시간 아키텍처 설계와 운영</b>을 직접 경험하며 실무 감각을 쌓을 수
+                                    있었습니다.</li>
+                                <li><b>실시간 데이터 파이프라인 구축</b>: KIS WebSocket, Kafka, Spring Boot를 연결해
+                                    <b>평균 4ms, 최대 10ms</b>의 안정적인 데이터 흐름을 달성했습니다.
+                                    단순 연동을 넘어서 <b>엔드 투 엔드 지연 측정 및 성능 모니터링 체계</b>를 도입한 것이 큰 성과였습니다.
+                                </li>
+                                <li><b>데이터 품질 관리</b>: 뉴스 데이터 수집 과정에서 중복·누락 문제를 해결하며,
+                                    MongoDB와 PostgreSQL의 특성을 결합한 <b>중복 제거·임베딩 저장 구조</b>를 구축했습니다.
+                                    이를 통해 단순 수집을 넘어 <b>분석 친화적인 데이터셋</b>을 확보했습니다.
+                                </li>
+                                <li><b>운영 및 확장 학습</b>: Docker Compose 기반으로 컨테이너 단위 운영 경험을 쌓았고,
+                                    향후 Prometheus·Grafana 기반의 <b>모니터링·알림 체계 확장</b>으로 이어질 수 있는 기반을 마련했습니다.
+                                </li>
+                                <li><b>향후 개선 방향</b>: STOMP WebSocket에 <b>JWT 인증·인가</b>를 강화하고,
+                                    장애 탐지 및 SLA 기반의 <b>자동 모니터링 체계</b>를 구축하여
+                                    안정성과 보안성을 더욱 높여갈 계획입니다.
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-
 
 
                 <!-- 하단 버튼 -->
